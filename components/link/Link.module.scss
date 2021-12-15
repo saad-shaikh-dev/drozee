@@ -1,0 +1,31 @@
+@use 'styles/abstracts' as a;
+
+.Link {
+	width: max-content;
+	display: inline-block;
+	color: a.$clr-purple;
+	text-decoration: none;
+	font-size: 1em;
+	line-height: 1;
+	font-weight: 400;
+}
+
+.LightLink {
+	@extend .Link;
+	color: a.$clr-white;
+}
+
+.ActionLightLink {
+	@extend .Link;
+	font-weight: 500;
+	color: a.$clr-primary;
+	background-color: a.$clr-white;
+	padding: 1rem 1.8rem;
+	border-radius: 30px;
+}
+
+.ActionLightDark {
+	@extend .Link;
+	color: a.$clr-white;
+	background-color: a.$clr-primary;
+}

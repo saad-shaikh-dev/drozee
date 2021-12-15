@@ -1,7 +1,15 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-import styles from 'styles/Home.module.scss';
+// Layout Components
+import Navbar from 'sections/navbar/Navbar';
+import Footer from 'sections/footer/Footer';
+
+// Section Components
+import HeroSection from 'sections/landingPage/hero/HeroSection';
+import DetailsSection from 'sections/landingPage/details/DetailsSection';
+import BenefitsSection from 'sections/landingPage/benefits/BenefitsSection';
+import NewsletterSection from 'sections/landingPage/newsletter/NewsletterSection';
 
 const Home: NextPage = () => {
 	return (
@@ -9,9 +17,14 @@ const Home: NextPage = () => {
 			<Head>
 				<title>Drozee</title>
 			</Head>
-			<div className={styles.MainContainer}>
-				<h1 className={styles.Heading}>Welcome to Drozee</h1>
-			</div>
+			<Navbar />
+			<main>
+				<HeroSection />
+				<DetailsSection />
+				<BenefitsSection />
+				<NewsletterSection />
+			</main>
+			<Footer />
 		</>
 	);
 };

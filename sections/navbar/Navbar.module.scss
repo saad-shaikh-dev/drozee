@@ -1,0 +1,46 @@
+@use 'styles/abstracts' as a;
+
+.Navbar {
+	width: 100%;
+	min-height: 8vh;
+	padding: 0.5rem 9%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	//! Remove
+	// outline: 1px solid red;
+	// background-color: #000;
+}
+
+.Navbar,
+.Logo_Container,
+.Navbar_Links_Container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.Navbar {
+	justify-content: space-between;
+}
+
+.Logo_Container {
+	gap: 1rem;
+}
+
+.Company_Name {
+	font-size: 1.5em;
+	font-weight: 400;
+	color: a.$clr-primary;
+}
+
+.Navbar_Links_Container {
+	width: clamp(450px, 30%, 549px);
+	list-style: none;
+}
+
+.Navbar_Link {
+	flex: 1;
+}
