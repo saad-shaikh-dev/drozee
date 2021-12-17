@@ -1,0 +1,81 @@
+@use 'styles/abstracts' as a;
+
+.DetailSection {
+	width: 100%;
+	padding: 0 10vh;
+}
+
+.SectionHeading {
+	max-width: 645px;
+	margin: 2rem auto;
+	text-align: center;
+	font-size: 1.875em;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.SectionHeadingHighlight {
+	color: a.$clr-primary;
+}
+
+.DetailsContainer {
+	width: 100%;
+	margin: 8rem 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 6rem;
+}
+
+.DetailsWrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.SVGContainer {
+	width: 446px;
+	height: 371px;
+	background-color: a.$clr-primary;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.SVGLeft {
+	border-radius: 0px 50px 50px 0px;
+}
+
+.SVGRight {
+	border-radius: 50px 0px 0px 50px;
+}
+
+.ContentContainer {
+	max-width: 600px;
+}
+
+.Heading {
+	margin: 0;
+	font-size: 2.8em;
+	font-weight: 800;
+	line-height: 1.2;
+}
+
+.HeadingHighlight {
+	color: a.$clr-green;
+}
+
+.Para .FunPartPara {
+	font-size: 1.125em;
+	line-height: 1.2;
+	font-weight: 400;
+}
+
+.FunPartParaHighlight {
+	font-weight: 600;
+	color: a.$clr-purple;
+}
