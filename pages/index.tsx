@@ -24,7 +24,7 @@ const Home: NextPage = () => {
 				<BenefitsSection />
 				<NewsletterSection />
 			</main>
-			{/* <Footer /> */}
+			<Footer />
 		</>
 	);
 };

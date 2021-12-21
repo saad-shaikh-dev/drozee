@@ -2,9 +2,9 @@
 
 .Footer {
 	width: 100%;
+	padding: 0 5vw;
 	background-color: a.$clr-primary;
 	display: flex;
-	flex-direction: row;
 	justify-content: center;
 }
 
@@ -15,29 +15,64 @@
 }
 
 .FooterTagLine {
-	max-width: 500px;
-	font-size: 1.125em;
+	width: auto;
+	margin: 2rem auto;
+	font-size: 0.9em;
 	font-weight: 400;
 	line-height: 1.5;
 	color: a.$clr-white-60;
-	margin: 2rem auto;
 }
 
 .FooterLinkListContainer {
 	list-style: none;
 	margin: 3rem 0;
 	display: flex;
-	justify-content: center;
+	flex-flow: row;
+	flex-wrap: wrap;
 	align-items: center;
-	gap: 3rem;
+	gap: 2rem;
 }
 
 .FooterLink {
-	font-size: 0.85em;
+	flex: 1;
+	font-size: 0.9em;
+}
+
+.FooterSocialLinkListContainer {
+	list-style: none;
+	max-width: 250px;
+	margin: 3rem auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 2rem;
 }
 
 .FooterCopyrightPara {
 	margin: auto;
-	font-size: 0.875em;
+	text-align: center;
+	font-size: 0.675em;
 	color: a.$clr-white-50;
+}
+
+@media screen and (min-width: a.$laptop-screen) {
+	.Footer {
+		padding: 0 10vw;
+	}
+	.FooterTagLine {
+		max-width: 500px;
+		font-size: 1.125em;
+	}
+	.FooterLinkListContainer {
+		list-style: none;
+		margin: 3rem 0;
+		justify-content: center;
+		gap: 3rem;
+	}
+	.FooterLink {
+		font-size: 0.85em;
+	}
+	.FooterCopyrightPara {
+		font-size: 0.875em;
+	}
 }

@@ -44,7 +44,7 @@ const Footer = () => {
 						</Link>
 					</li>
 				</ul>
-				<ul className={styles.FooterLinkListContainer}>
+				<ul className={styles.FooterSocialLinkListContainer}>
 					<li className={styles.FooterLink}>
 						<Link href='/' title='Facebook' ariaLabel='Facebook' type='light'>
 							<svg
