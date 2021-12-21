@@ -9,7 +9,7 @@ const BenefitsSection = () => {
 	return (
 		<section className={styles.BenefitsSection}>
 			<h2 className={styles.SectionHeading}>
-				Join at beta phase and get exclusive
+				Join at alpha phase and get exclusive
 				<span className={styles.SectionHeadingHighlight}> benefits</span>
 			</h2>
 			<div className={styles.BenefitsContainer}>

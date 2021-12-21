@@ -40,7 +40,7 @@ const HeroSection = () => {
 						</Button>
 					</form>
 					<p className={styles.Para}>
-						Don’t worry, we won’t charge our beta users. Free forever{' '}
+						Don’t worry, we won’t charge our alpha users. Free forever{' '}
 						<Link
 							href='/'
 							title='Join Beta Program'

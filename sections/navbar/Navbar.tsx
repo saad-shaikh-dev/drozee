@@ -28,7 +28,7 @@ const Navbar = () => {
 						title='Beta Access'
 						ariaLabel='Beta Access'
 					>
-						Beta Access
+						Alpha Access
 					</Link>
 				</li>
 			</ul>
