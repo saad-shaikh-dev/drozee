@@ -16,3 +16,16 @@ $clr-white: hsla(0, 0%, 100%, 1);
 $clr-black-50: hsla(0, 0%, 0%, 0.5);
 $clr-white-50: hsla(0, 0%, 100%, 0.5);
 $clr-white-60: hsla(0, 0%, 100%, 0.6);
+
+// breakpoints
+$mobile-screen: 320px;
+$tablet-screen: 481px;
+
+$large-tablet-screen: 568px;
+
+$laptop-screen: 769px;
+$monitor-screen: 1025px;
+
+$large-monitor-screen: 1201px;
+
+$tv-screen: 1440px;

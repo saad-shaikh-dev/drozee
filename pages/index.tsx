@@ -17,14 +17,14 @@ const Home: NextPage = () => {
 			<Head>
 				<title>Drozee</title>
 			</Head>
-			<Navbar />
+			{/* <Navbar /> */}
 			<main>
 				<HeroSection />
 				<DetailsSection />
 				<BenefitsSection />
 				<NewsletterSection />
 			</main>
-			<Footer />
+			{/* <Footer /> */}
 		</>
 	);
 };
