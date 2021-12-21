@@ -2,7 +2,8 @@
 
 .DetailSection {
 	width: 100%;
-	padding: 0 10vh;
+	padding: 0 15vw;
+	overflow: hidden;
 }
 
 .SectionHeading {
@@ -25,57 +26,144 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
-	gap: 6rem;
+	gap: 3rem;
 }
 
 .DetailsWrapper {
 	width: 100%;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
 }
 
 .SVGContainer {
-	width: 446px;
-	height: 371px;
+	min-width: 344px;
+	min-height: 288px;
 	background-color: a.$clr-primary;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	order: 1;
 	overflow: hidden;
+	position: relative;
 }
 
 .SVGLeft {
+	left: -15vw;
+	margin-right: auto;
 	border-radius: 0px 50px 50px 0px;
 }
 
 .SVGRight {
+	right: -15vw;
+	margin-left: auto;
 	border-radius: 50px 0px 0px 50px;
 }
 
 .ContentContainer {
 	max-width: 600px;
+	margin: auto;
+	order: 2;
 }
 
 .Heading {
-	margin: 0;
-	font-size: 2.8em;
+	margin-top: 1rem;
+	font-size: 1.25em;
 	font-weight: 800;
-	line-height: 1.2;
+	line-height: 1.5;
 }
 
-.HeadingHighlight {
+.HighlightGreen {
 	color: a.$clr-green;
 }
 
-.Para .FunPartPara {
-	font-size: 1.125em;
-	line-height: 1.2;
+.HighlightYellow {
+	color: a.$clr-yellow;
+}
+
+.HighlightMagenta {
+	color: a.$clr-magenta;
+}
+
+.Para,
+.FunPartPara {
+	font-size: 0.875em;
 	font-weight: 400;
+}
+
+.Para {
+	margin: 1.5rem 0;
+	line-height: 1.3;
 }
 
 .FunPartParaHighlight {
 	font-weight: 600;
+	line-height: 1.3;
 	color: a.$clr-purple;
+}
+
+@media screen and (min-width: a.$monitor-screen) {
+	.DetailSection {
+		padding: 0 15vh;
+	}
+	.SectionHeading {
+		max-width: 645px;
+		margin: 2rem auto;
+		text-align: center;
+		font-size: 1.875em;
+		font-weight: 700;
+		line-height: 1.2;
+	}
+	.DetailsContainer {
+		gap: 4rem;
+	}
+	.SVGContainer {
+		min-width: 446px;
+		min-height: 371px;
+	}
+	.SVGLeft {
+		left: 0;
+	}
+	.SVGRight {
+		right: 0;
+	}
+	.Heading {
+		margin-top: 2rem;
+		font-size: 2.8em;
+		font-weight: 800;
+		line-height: 1.2;
+	}
+	.Para,
+	.FunPartPara {
+		font-size: 1.125em;
+	}
+	.Para {
+		margin: 2rem 0;
+		line-height: 1.5;
+	}
+	.FunPartParaHighlight {
+		line-height: 1.5;
+	}
+}
+
+@media screen and (min-width: a.$large-monitor-screen) {
+	.DetailSection {
+		width: 100%;
+		padding: 0 15vh;
+	}
+	.DetailsContainer {
+		gap: 6rem;
+	}
+	.DetailsWrapper {
+		flex-direction: row;
+	}
+	.SVGContainer {
+		order: 0;
+	}
+
+	.ContentContainer {
+		margin: 0;
+		order: 0;
+	}
 }

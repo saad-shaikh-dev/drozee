@@ -19,7 +19,7 @@ const DetailsSection = () => {
 					<div className={styles.ContentContainer}>
 						<h3 className={styles.Heading}>
 							Become a better version of you,
-							<span className={styles.HeadingHighlight}> Everyday!</span>
+							<span className={styles.HighlightGreen}> Everyday!</span>
 						</h3>
 						<p className={styles.Para}>
 							Follow AI Guided learning Recommendation, compare 1000s of
@@ -36,7 +36,7 @@ const DetailsSection = () => {
 					<div className={styles.ContentContainer}>
 						<h3 className={styles.Heading}>
 							Let us sort everything for you,
-							<span className={styles.HeadingHighlight}> Important One!</span>
+							<span className={styles.HighlightYellow}> Important One!</span>
 						</h3>
 						<p className={styles.Para}>
 							CV, Portfolio, Academics documents & your skill certificates.
@@ -59,7 +59,7 @@ const DetailsSection = () => {
 					<div className={styles.ContentContainer}>
 						<h3 className={styles.Heading}>
 							Something should be surprise,
-							<span className={styles.HeadingHighlight}> Signup Now!</span>
+							<span className={styles.HighlightMagenta}> Signup Now!</span>
 						</h3>
 						<p className={styles.Para}>
 							Our team of good product designers & developers are working day &
