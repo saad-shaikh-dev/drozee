@@ -8,8 +8,8 @@ const DetailsSection = () => {
 	return (
 		<section className={styles.DetailSection}>
 			<h2 className={styles.SectionHeading}>
-				Join to become part of fastest growing community but{' '}
-				<span className={styles.SectionHeadingHighlight}>why?</span>
+				Join to become part of fastest growing community
+				<span className={styles.SectionHeadingHighlight}> why?</span>
 			</h2>
 			<div className={styles.DetailsContainer}>
 				<div className={styles.DetailsWrapper}>
