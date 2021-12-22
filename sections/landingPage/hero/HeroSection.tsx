@@ -2,7 +2,6 @@ import Link from 'components/link/Link';
 import Button from 'components/button/Button';
 
 import HeroSectionSVG from 'assets/sections/hero/hero_section.svg';
-import HeroSectionBackgroundSVG from 'assets/sections/hero/hero_background.svg';
 import styles from './HeroSection.module.scss';
 
 const HeroSection = () => {
@@ -54,9 +53,6 @@ const HeroSection = () => {
 				<div className={styles.HeroSVGContainer}>
 					<span className={styles.HeroPeopleSVGContainer}>
 						<HeroSectionSVG />
-					</span>
-					<span className={styles.HeroBackgroundSVGContainer}>
-						<HeroSectionBackgroundSVG />
 					</span>
 				</div>
 			</div>

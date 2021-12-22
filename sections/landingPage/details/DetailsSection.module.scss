@@ -2,7 +2,7 @@
 
 .DetailSection {
 	width: 100%;
-	padding: 0 15vw;
+	padding: 0 10vw;
 	overflow: hidden;
 }
 
@@ -103,9 +103,9 @@
 	color: a.$clr-purple;
 }
 
-@media screen and (min-width: a.$monitor-screen) {
+@media screen and (min-width: a.$large-tablet-screen) {
 	.DetailSection {
-		padding: 0 15vh;
+		padding: 0 10vw;
 	}
 	.SectionHeading {
 		max-width: 645px;
@@ -150,7 +150,7 @@
 @media screen and (min-width: a.$large-monitor-screen) {
 	.DetailSection {
 		width: 100%;
-		padding: 0 15vh;
+		padding: 0 10vw;
 	}
 	.DetailsContainer {
 		gap: 6rem;
