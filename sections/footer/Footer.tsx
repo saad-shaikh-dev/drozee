@@ -1,4 +1,4 @@
-import Logo from 'assets/logo/white_dashed_logo.svg';
+import Logo from 'assets/logo/big_white_dashed_logo.svg';
 import Link from 'components/link/Link';
 
 import styles from './Footer.module.scss';

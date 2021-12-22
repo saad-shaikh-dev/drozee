@@ -2,45 +2,116 @@
 
 .Navbar {
 	width: 100%;
-	min-height: 8vh;
-	padding: 0.5rem 9%;
+	min-height: 10vh;
+	padding: 0 6.5vw 0 10vw;
 	position: absolute;
-	top: 0;
+	top: 3vh;
 	left: 0;
 	z-index: 10;
-	//! Remove
-	// outline: 1px solid red;
-	// background-color: #000;
 }
 
-.Navbar,
-.Logo_Container,
-.Navbar_Links_Container {
+.MobileNavber {
+	width: 100%;
+	display: block;
+}
+
+.MobileNavbar {
+	width: 100%;
+	min-height: 10vh;
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
-	align-items: center;
-}
-
-.Navbar {
 	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	top: -3vh;
+	right: 0;
+	background-color: a.$clr-primary;
 }
 
-.Logo_Container {
-	gap: 1rem;
+.MobileLogo_Container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 
-.Company_Name {
-	font-size: 1.5em;
-	font-weight: 400;
-	color: a.$clr-primary;
+.MobileNavbar_Links_Container {
+	display: none;
+	// width: 100%;
+	// list-style: none;
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: center;
+	// align-items: center;
+	// gap: 10rem;
 }
 
-.Navbar_Links_Container {
-	width: clamp(450px, 30%, 549px);
-	list-style: none;
+.MobileMenuBtn {
+	margin-right: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 7px;
+	background: transparent;
+	cursor: pointer;
+	border: none;
 }
 
-.Navbar_Link {
-	flex: 1;
+.MobileMenuBtn span {
+	display: inline-block;
+	width: 32px;
+	height: 3px;
+	transition: all 0.2s linear;
+	background-color: a.$clr-white;
+}
+
+.ActiveMobileMenuBtn span {
+	// background-color: a.$clr-white;
+	&:nth-child(1) {
+		transform: rotate(-50deg) translate(-6px, 6px);
+	}
+	&:nth-child(2) {
+		transform: rotate(50deg) translate(-6px, -6px);
+	}
+}
+
+.MonitorNavbar {
+	display: none;
+}
+
+@media screen and (min-width: a.$monitor-screen) {
+	.MobileNavbar {
+		display: none;
+	}
+	.MonitorNavbar {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.MonitorLogo_Container a {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 1rem;
+	}
+	.Company_Name {
+		font-size: 1.5em;
+		font-weight: 400;
+		color: a.$clr-primary;
+	}
+	.MonitorNavbar_Links_Container {
+		width: clamp(420px, 25%, 520px);
+		min-height: auto;
+		background-color: transparent;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 0;
+		position: static;
+	}
+	.Navbar_Link {
+		flex: 1;
+	}
 }
