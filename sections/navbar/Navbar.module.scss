@@ -10,42 +10,55 @@
 	z-index: 10;
 }
 
-.MobileNavber {
-	width: 100%;
-	display: block;
-}
-
-.MobileNavbar {
+.CloseMenuMobileNavbar {
 	width: 100%;
 	min-height: 10vh;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	background-color: transparent;
+	transition: background-color 0.2s linear;
 	position: absolute;
 	top: -3vh;
 	right: 0;
-	background-color: a.$clr-primary;
 }
 
 .MobileLogo_Container {
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	position: relative;
+	z-index: 20;
 }
 
-.MobileNavbar_Links_Container {
-	display: none;
-	// width: 100%;
-	// list-style: none;
-	// display: flex;
-	// flex-direction: column;
-	// justify-content: center;
-	// align-items: center;
-	// gap: 10rem;
+.CloseMenuMobileNavbar_Links_Container {
+	width: 0px;
+	min-height: 100vh;
+	list-style: none;
+	padding: 15vh 5vw 5vh 5vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 5rem;
+	background-color: a.$clr-primary;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 5;
+	opacity: 0;
+	transition: all 0.2s linear;
+	transform: translateX(100%);
 }
 
-.MobileMenuBtn {
+.OpenMenuMobileNavbar_Links_Container {
+	width: 100%;
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.CloseMenuBtn {
 	margin-right: 0.5rem;
 	display: flex;
 	flex-direction: column;
@@ -55,23 +68,27 @@
 	background: transparent;
 	cursor: pointer;
 	border: none;
+	position: absolute;
+	top: 3.5vh;
+	right: 5vw;
+	z-index: 20;
 }
 
-.MobileMenuBtn span {
+.CloseMenuBtn span {
 	display: inline-block;
 	width: 32px;
 	height: 3px;
 	transition: all 0.2s linear;
-	background-color: a.$clr-white;
+	background-color: a.$clr-primary;
 }
 
-.ActiveMobileMenuBtn span {
-	// background-color: a.$clr-white;
+.OpenMenuBtn span {
+	background-color: a.$clr-white;
 	&:nth-child(1) {
-		transform: rotate(-50deg) translate(-6px, 6px);
+		transform: rotate(-50deg) translate(-6px, 0);
 	}
 	&:nth-child(2) {
-		transform: rotate(50deg) translate(-6px, -6px);
+		transform: rotate(50deg) translate(-6px, 0);
 	}
 }
 
@@ -80,7 +97,7 @@
 }
 
 @media screen and (min-width: a.$monitor-screen) {
-	.MobileNavbar {
+	.CloseMenuMobileNavbar {
 		display: none;
 	}
 	.MonitorNavbar {

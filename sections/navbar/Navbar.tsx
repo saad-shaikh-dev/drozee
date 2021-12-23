@@ -16,11 +16,20 @@ const Navbar = () => {
 		showMenu(!prevMenuState);
 	};
 
-	let mobileMenuBtn = styles.MobileMenuBtn;
+	let mobileNavbar = styles.CloseMenuMobileNavbar;
+	let mobileNavbarLinkContainer = styles.CloseMenuMobileNavbar_Links_Container;
+	let mobileMenuBtn = styles.CloseMenuBtn;
+
 	if (menu) {
-		mobileMenuBtn = [styles.MobileMenuBtn, styles.ActiveMobileMenuBtn].join(
-			' '
-		);
+		mobileNavbar = [
+			styles.CloseMenuMobileNavbar,
+			styles.OpenMenuMobileNavbar
+		].join(' ');
+		mobileNavbarLinkContainer = [
+			styles.CloseMenuMobileNavbar_Links_Container,
+			styles.OpenMenuMobileNavbar_Links_Container
+		].join(' ');
+		mobileMenuBtn = [styles.CloseMenuBtn, styles.OpenMenuBtn].join(' ');
 	}
 
 	return (
@@ -55,13 +64,13 @@ const Navbar = () => {
 					</li>
 				</ul>
 			</div>
-			<div className={styles.MobileNavbar}>
+			<div className={mobileNavbar}>
 				<div className={styles.MobileLogo_Container}>
 					<Link href='/' title='Logo' ariaLabel='Logo'>
-						{menu ? <PrimaryLogo /> : <WhiteLogo />}
+						{menu ? <WhiteLogo /> : <PrimaryLogo />}
 					</Link>
 				</div>
-				<ul className={styles.MobileNavbar_Links_Container}>
+				<ul className={mobileNavbarLinkContainer}>
 					<li className={styles.Navbar_Link}>
 						<Link href='/' type='light' title='Partners' ariaLabel='Partners'>
 							Partners

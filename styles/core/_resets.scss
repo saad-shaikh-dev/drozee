@@ -113,6 +113,8 @@ section {
 
 body {
 	line-height: 1;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 ol,
