@@ -13,27 +13,28 @@
 .CloseMenuMobileNavbar {
 	width: 100%;
 	min-height: 10vh;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
 	background-color: transparent;
-	transition: background-color 0.2s linear;
 	position: absolute;
 	top: -3vh;
 	right: 0;
+	overflow: hidden;
+}
+
+.OpenMenuMobileNavbar {
+	min-height: 100vh;
+	overflow: visible;
 }
 
 .MobileLogo_Container {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	position: relative;
+	width: max-content;
+	position: absolute;
+	top: 2.5vh;
+	left: 46.5%;
 	z-index: 20;
 }
 
 .CloseMenuMobileNavbar_Links_Container {
-	width: 0px;
+	width: 0;
 	min-height: 100vh;
 	list-style: none;
 	padding: 15vh 5vw 5vh 5vw;
@@ -42,19 +43,20 @@
 	justify-content: center;
 	align-items: center;
 	gap: 5rem;
-	background-color: a.$clr-primary;
+	background-color: a.$clr-white;
 	position: absolute;
 	top: 0;
 	right: 0;
 	z-index: 5;
-	opacity: 0;
-	transition: all 0.2s linear;
+	opacity: 1;
+	transition: all 0.2s linear, background-color 0s linear;
 	transform: translateX(100%);
 }
 
 .OpenMenuMobileNavbar_Links_Container {
 	width: 100%;
 	opacity: 1;
+	background-color: a.$clr-primary;
 	transform: translateX(0);
 }
 
@@ -64,7 +66,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 7px;
+	gap: 4px;
 	background: transparent;
 	cursor: pointer;
 	border: none;
@@ -88,6 +90,9 @@
 		transform: rotate(-50deg) translate(-6px, 0);
 	}
 	&:nth-child(2) {
+		opacity: 0;
+	}
+	&:nth-child(3) {
 		transform: rotate(50deg) translate(-6px, 0);
 	}
 }
