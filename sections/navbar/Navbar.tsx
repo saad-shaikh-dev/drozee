@@ -95,6 +95,7 @@ const Navbar = () => {
 				<button className={mobileMenuBtn} onClick={onMobileMenuClick}>
 					<span></span>
 					<span></span>
+					<span></span>
 				</button>
 			</div>
 		</nav>
