@@ -1,3 +1,5 @@
+import Emoji from 'components/emoji/Emoji';
+
 import FirstSVG from 'assets/sections/details/detail_first.svg';
 import SecondSVG from 'assets/sections/details/detail_second.svg';
 import ThirdSVG from 'assets/sections/details/detail_third.svg';
@@ -28,7 +30,8 @@ const DetailsSection = () => {
 						</p>
 						<p className={styles.FunPartPara}>
 							<span className={styles.FunPartParaHighlight}>Fun Part: </span>We
-							don’t own a single paid course. Ours will be free. God promise.
+							don’t own a single paid course. Ours will be free. God promise.{' '}
+							<Emoji symbol='&#128526;' label='smiling face with sunglasses' />
 						</p>
 					</div>
 				</div>
@@ -46,6 +49,7 @@ const DetailsSection = () => {
 						<p className={styles.FunPartPara}>
 							<span className={styles.FunPartParaHighlight}>Bonus: </span>
 							We’ll reward you for your activities with points or vouchers.
+							<Emoji symbol='&#127881;' label='celebration, party hat' />
 						</p>
 					</div>
 					<div className={[styles.SVGContainer, styles.SVGRight].join(' ')}>
@@ -70,6 +74,10 @@ const DetailsSection = () => {
 							<span className={styles.FunPartParaHighlight}>Secret: </span>
 							We’re too excited so typed random features and now we have to work
 							on random features.
+							<Emoji
+								symbol='&#128517;'
+								label='smiling face with open mouth and cold sweat emoji'
+							/>
 						</p>
 					</div>
 				</div>
