@@ -51,9 +51,9 @@ const HeroSection = () => {
 					<div className={styles.NewsBanner}></div>
 				</div>
 				<div className={styles.HeroSVGContainer}>
-					<span className={styles.HeroPeopleSVGContainer}>
+					<div className={styles.HeroPeopleSVGContainer}>
 						<HeroSectionSVG />
-					</span>
+					</div>
 				</div>
 			</div>
 		</section>
