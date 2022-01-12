@@ -8,13 +8,34 @@
 
 .SectionHeading {
 	text-align: center;
-	font-size: 1.25em;
+	font-size: 1.25rem;
 	font-weight: 700;
 	line-height: 1.2;
 }
 
+.SectionHeadingHighlightContainer {
+	display: inline-block;
+	color: a.$clr-white;
+	position: relative;
+}
+
 .SectionHeadingHighlight {
-	color: a.$clr-primary;
+	color: a.$clr-white;
+	margin-left: 10px;
+	font-size: 1.25rem;
+	font-weight: 700;
+	line-height: 1.2;
+	position: relative;
+	z-index: 5;
+}
+
+.SectionHeadingHighlightContainer svg {
+	width: 110%;
+	height: auto;
+	position: absolute;
+	top: -30%;
+	left: 0;
+	right: 0;
 }
 
 .BenefitsContainer {
@@ -51,16 +72,19 @@
 }
 
 .BenefitsPara {
-	font-size: 0.75em;
+	font-size: 0.75rem;
 	font-weight: 600;
 	line-height: 1;
 }
 
 @media screen and (min-width: a.$laptop-screen) {
 	.SectionHeading {
-		max-width: 750px;
+		max-width: 800px;
 		margin: 2rem auto;
-		font-size: 1.875em;
+		font-size: 1.875rem;
+	}
+	.SectionHeadingHighlight {
+		font-size: 1.875rem;
 	}
 	.BenefitsContainer {
 		width: 80%;
@@ -71,6 +95,6 @@
 		width: 50%;
 	}
 	.BenefitsPara {
-		font-size: 0.9em;
+		font-size: 0.9rem;
 	}
 }

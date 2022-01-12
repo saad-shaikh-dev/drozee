@@ -1,5 +1,6 @@
 import Emoji from 'components/emoji/Emoji';
 
+import HeadingSVG from 'assets/sections/details/heading_background.svg';
 import FirstSVG from 'assets/sections/details/detail_first.svg';
 import SecondSVG from 'assets/sections/details/detail_second.svg';
 import ThirdSVG from 'assets/sections/details/detail_third.svg';
@@ -11,7 +12,48 @@ const DetailsSection = () => {
 		<section className={styles.DetailSection}>
 			<h2 className={styles.SectionHeading}>
 				Join to become part of fastest growing community
-				<span className={styles.SectionHeadingHighlight}> why?</span>
+				<div className={styles.SectionHeadingHighlightContainer}>
+					<h2 className={styles.SectionHeadingHighlight}>why?</h2>
+					{/* <HeadingSVG /> */}
+					<svg
+						width='114'
+						height='82'
+						viewBox='0 0 114 82'
+						fill='none'
+						xmlns='http://www.w3.org/2000/svg'
+					>
+						<line
+							x1='14.4314'
+							y1='25.7087'
+							x2='77.7087'
+							y2='16.5686'
+							stroke='#292953'
+							strokeOpacity='0.71'
+							strokeWidth='27'
+							strokeLinecap='round'
+						/>
+						<line
+							x1='39.1988'
+							y1='47.2043'
+							x2='78.0453'
+							y2='16.7153'
+							stroke='#292953'
+							strokeOpacity='0.71'
+							strokeWidth='27'
+							strokeLinecap='round'
+						/>
+						<line
+							x1='39.4694'
+							y1='47.4093'
+							x2='97.4141'
+							y2='31.5444'
+							stroke='#292953'
+							strokeOpacity='0.71'
+							strokeWidth='27'
+							strokeLinecap='round'
+						/>
+					</svg>
+				</div>
 			</h2>
 			<div className={styles.DetailsContainer}>
 				<div className={styles.DetailsWrapper}>
