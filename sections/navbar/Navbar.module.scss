@@ -136,4 +136,10 @@
 	.Navbar_Link {
 		flex: 1;
 	}
+	.Navbar_Link_Partners_Container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 0.5rem;
+	}
 }

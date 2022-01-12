@@ -1,4 +1,3 @@
-import Logo from 'assets/logo/big_white_dashed_logo.svg';
 import Link from 'components/link/Link';
 
 import styles from './Footer.module.scss';
@@ -6,45 +5,128 @@ import styles from './Footer.module.scss';
 const Footer = () => {
 	return (
 		<footer className={styles.Footer}>
-			<div className={styles.FooterContainer}>
-				<Logo />
-				<h4 className={styles.FooterTagLine}>
-					Manage, Compare & Showcase your whole learning journey at one place.
-					Save time & money
-				</h4>
-				<ul className={styles.FooterLinkListContainer}>
-					<li className={styles.FooterLink}>
-						<Link href='/' title='About Us' ariaLabel='About Us' type='light'>
-							About Us
-						</Link>
-					</li>
-					<li className={styles.FooterLink}>
-						<Link href='/' title='Contact' ariaLabel='Contact' type='light'>
-							Contact
-						</Link>
-					</li>
-					<li className={styles.FooterLink}>
-						<Link href='/' title='FAQs' ariaLabel='FAQs' type='light'>
-							FAQs
-						</Link>
-					</li>
-					<li className={styles.FooterLink}>
-						<Link href='/' title='About Us' ariaLabel='About Us' type='light'>
-							About Us
-						</Link>
-					</li>
-					<li className={styles.FooterLink}>
-						<Link href='/' title='Contact' ariaLabel='Contact' type='light'>
-							Contact
-						</Link>
-					</li>
-					<li className={styles.FooterLink}>
-						<Link href='/' title='FAQs' ariaLabel='FAQs' type='light'>
-							FAQs
-						</Link>
-					</li>
-				</ul>
-				<ul className={styles.FooterSocialLinkListContainer}>
+			<div className={styles.Footer_Row}>
+				<div className={styles.Footer_Column}>
+					<h3 className={styles.Content_Heading}>Product</h3>
+					<ul className={styles.Footer_Page_Link_Container}>
+						<li className={styles.Footer_Page_Link}>
+							<Link href='/' type='light' title='' ariaLabel=''>
+								Drozee Overview
+							</Link>
+						</li>
+						<li className={styles.Footer_Page_Link}>
+							<Link href='/' type='light' title='' ariaLabel=''>
+								Learning Path
+							</Link>
+						</li>
+						<li className={styles.Footer_Page_Link}>
+							<Link href='/' type='light' title='' ariaLabel=''>
+								StepDegree
+							</Link>
+						</li>
+						<li className={styles.Footer_Page_Link}>
+							<Link href='/' type='light' title='' ariaLabel=''>
+								Skill Match
+							</Link>
+						</li>
+						<li className={styles.Footer_Page_Link}>
+							<Link href='/' type='light' title='' ariaLabel=''>
+								TopSlot
+							</Link>
+						</li>
+					</ul>
+				</div>
+				<div className={styles.Footer_Column}>
+					<h3 className={styles.Content_Heading}>Company</h3>
+					<ul className={styles.Footer_Page_Link_Container}>
+						<li className={styles.Footer_Page_Link}>
+							<Link href='/' type='light' title='' ariaLabel=''>
+								About Us
+							</Link>
+						</li>
+						<li className={styles.Footer_Page_Link}>
+							<Link href='/' type='light' title='' ariaLabel=''>
+								Career
+							</Link>
+						</li>
+						<li className={styles.Footer_Page_Link}>
+							<Link href='/' type='light' title='' ariaLabel=''>
+								Spotlight
+							</Link>
+						</li>
+						<li className={styles.Footer_Page_Link}>
+							<Link href='/' type='light' title='' ariaLabel=''>
+								Customer Stories
+							</Link>
+						</li>
+						<li className={styles.Footer_Page_Link}>
+							<Link href='/' type='light' title='' ariaLabel=''>
+								Our Heros
+							</Link>
+						</li>
+						<li className={styles.Footer_Page_Link}>
+							<Link href='/' type='light' title='' ariaLabel=''>
+								Pricing
+							</Link>
+						</li>
+					</ul>
+				</div>
+				<div className={styles.Footer_Column}>
+					<h3 className={styles.Content_Heading}>Resources</h3>
+					<ul className={styles.Footer_Page_Link_Container}>
+						<li className={styles.Footer_Page_Link}>
+							<Link href='/' type='light' title='' ariaLabel=''>
+								Help Center
+							</Link>
+						</li>
+						<li className={styles.Footer_Page_Link}>
+							<Link href='/' type='light' title='' ariaLabel=''>
+								Blog
+							</Link>
+						</li>
+						<li className={styles.Footer_Page_Link}>
+							<Link href='/' type='light' title='' ariaLabel=''>
+								Community
+							</Link>
+						</li>
+						<li className={styles.Footer_Page_Link}>
+							<Link href='/' type='light' title='' ariaLabel=''>
+								Developers (for open source)
+							</Link>
+						</li>
+					</ul>
+				</div>
+				<div className={styles.Footer_Column}>
+					<h3 className={styles.Content_Heading}>Partners</h3>
+					<ul className={styles.Footer_Page_Link_Container}>
+						<li className={styles.Footer_Page_Link}>
+							<Link href='/' type='light' title='' ariaLabel=''>
+								Academics
+							</Link>
+						</li>
+						<li className={styles.Footer_Page_Link}>
+							<Link href='/' type='light' title='' ariaLabel=''>
+								Corporates
+							</Link>
+						</li>
+						<li className={styles.Footer_Page_Link}>
+							<Link href='/' type='light' title='' ariaLabel=''>
+								Recruiters
+							</Link>
+						</li>
+						<li className={styles.Footer_Page_Link}>
+							<Link href='/' type='light' title='' ariaLabel=''>
+								Startups
+							</Link>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div className={styles.Footer_Copyright_Container}>
+				<p className={styles.Footer_Copyright_Para}>
+					Copyright © 2022 Drozee. All rights reserved.
+				</p>
+				<ul className={styles.Footer_SocialLink_Container}>
 					<li className={styles.FooterLink}>
 						<Link href='/' title='Facebook' ariaLabel='Facebook' type='light'>
 							<svg
@@ -133,9 +215,6 @@ const Footer = () => {
 						</Link>
 					</li>
 				</ul>
-				<p className={styles.FooterCopyrightPara}>
-					Copyright © 2022 Drozee. All rights reserved.
-				</p>
 			</div>
 		</footer>
 	);

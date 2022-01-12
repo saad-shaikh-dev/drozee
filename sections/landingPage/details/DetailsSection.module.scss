@@ -7,15 +7,36 @@
 }
 
 .SectionHeading {
-	margin-bottom: 2rem;
+	margin-bottom: 3rem;
 	text-align: center;
-	font-size: 1.25em;
+	font-size: 1.25rem;
 	font-weight: 700;
 	line-height: 1.2;
 }
 
+.SectionHeadingHighlightContainer {
+	display: inline-block;
+	color: a.$clr-white;
+	position: relative;
+}
+
 .SectionHeadingHighlight {
-	color: a.$clr-primary;
+	color: a.$clr-white;
+	margin-left: 10px;
+	font-size: 1.25rem;
+	font-weight: 700;
+	line-height: 1.2;
+	position: relative;
+	z-index: 5;
+}
+
+.SectionHeadingHighlightContainer svg {
+	width: 110%;
+	height: auto;
+	position: absolute;
+	top: -15%;
+	left: 0;
+	right: 0;
 }
 
 .DetailsContainer {
@@ -104,8 +125,16 @@
 @media screen and (min-width: a.$large-tablet-screen) {
 	.SectionHeading {
 		max-width: 645px;
-		margin: 0rem auto 2rem auto;
-		font-size: 1.875em;
+		margin: 1rem auto 7rem auto;
+		font-size: 1.875rem;
+	}
+	.SectionHeadingHighlightContainer svg {
+		width: 120%;
+		height: auto;
+		top: -15%;
+	}
+	.SectionHeadingHighlight {
+		font-size: 1.875rem;
 	}
 	.DetailsContainer {
 		gap: 4rem;
@@ -149,7 +178,6 @@
 	.SVGContainer {
 		order: 0;
 	}
-
 	.ContentContainer {
 		margin: 0;
 		order: 0;
