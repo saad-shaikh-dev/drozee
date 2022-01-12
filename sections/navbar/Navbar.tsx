@@ -44,7 +44,24 @@ const Navbar = () => {
 				<ul className={styles.MonitorNavbar_Links_Container}>
 					<li className={styles.Navbar_Link}>
 						<Link href='/' type='light' title='Partners' ariaLabel='Partners'>
-							Partners
+							<span className={styles.Navbar_Link_Partners_Container}>
+								<p className={styles.Navbar_Link_Partners}>Partners</p>
+								<svg
+									className={styles.Navbar_Link_Partners_SVG}
+									width='9'
+									height='5'
+									viewBox='0 0 9 5'
+									fill='none'
+									xmlns='http://www.w3.org/2000/svg'
+								>
+									<path
+										d='M1 1L4.5 4L8 1'
+										stroke='white'
+										strokeWidth='1.5'
+										strokeLinecap='round'
+									/>
+								</svg>
+							</span>
 						</Link>
 					</li>
 					<li className={styles.Navbar_Link}>
