@@ -2,77 +2,94 @@
 
 .Footer {
 	width: 100%;
-	padding: 0 5vw;
+	color: a.$clr-white;
 	background-color: a.$clr-primary;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
 }
 
-.FooterContainer {
-	margin: 2rem 0;
-	text-align: center;
-	color: a.$clr-white;
-}
-
-.FooterTagLine {
-	width: auto;
-	margin: 2rem auto;
-	font-size: 0.9em;
-	font-weight: 400;
-	line-height: 1.5;
-	color: a.$clr-white-60;
-}
-
-.FooterLinkListContainer {
-	list-style: none;
-	margin: 3rem 0;
+.Footer_Row {
+	margin: 10vh 10vw 8vh 10vw;
 	display: flex;
-	flex-flow: row;
-	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 2.5rem;
+}
+
+.Footer_Column {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 1rem;
+}
+
+.Content_Heading {
+	font-size: 1.2rem;
+	line-height: 1.2;
+	font-weight: 700;
+	letter-spacing: 0.9px;
+}
+
+.Footer_Page_Link {
+	margin-bottom: 0.9rem;
+}
+
+.Footer_Page_Link a {
+	font-size: 0.825rem;
+	line-height: 1.2;
+}
+
+.Footer_Copyright_Container {
+	width: 100%;
+	padding: 2rem 10vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
-	gap: 2rem;
+	gap: 1.2rem;
+	background-color: a.$clr-primary-dark;
 }
 
-.FooterLink {
-	flex: 1;
-	font-size: 0.9em;
+.Footer_Copyright_Para {
+	font-size: 0.725rem;
+	line-height: 1.2;
 }
 
-.FooterSocialLinkListContainer {
-	list-style: none;
-	max-width: 250px;
-	margin: 3rem auto;
+.Footer_SocialLink_Container {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 	align-items: center;
 	gap: 2rem;
-}
-
-.FooterCopyrightPara {
-	margin: auto;
-	text-align: center;
-	font-size: 0.675em;
-	color: a.$clr-white-50;
 }
 
 @media screen and (min-width: a.$laptop-screen) {
-	.Footer {
-		padding: 0 10vw;
+	.Footer_Row {
+		margin: 17vh 0 13vh 0;
+		flex-direction: row;
+		justify-content: space-evenly;
+		gap: 0;
 	}
-	.FooterTagLine {
-		max-width: 500px;
-		font-size: 1.125em;
+	.Footer_Column {
+		gap: 2rem;
 	}
-	.FooterLinkListContainer {
-		list-style: none;
-		margin: 3rem 0;
-		justify-content: center;
-		gap: 3rem;
+	.Content_Heading {
+		font-size: 1.5rem;
 	}
-	.FooterLink {
-		font-size: 0.85em;
+	.Footer_Page_Link {
+		margin-bottom: 0.9rem;
 	}
-	.FooterCopyrightPara {
-		font-size: 0.875em;
+	.Footer_Page_Link a {
+		font-size: 0.9rem;
+	}
+	.Footer_Copyright_Container {
+		flex-direction: row;
+		justify-content: space-between;
+		gap: 0;
+	}
+	.Footer_Copyright_Para {
+		font-size: 0.875rem;
 	}
 }
