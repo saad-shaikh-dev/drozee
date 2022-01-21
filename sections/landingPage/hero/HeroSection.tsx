@@ -2,29 +2,23 @@ import Link from 'components/link/Link';
 import Button from 'components/button/Button';
 
 import HeroSectionSVG from 'assets/sections/hero/hero_section.svg';
-import styles from './HeroSection.module.scss';
 
 const HeroSection = () => {
 	return (
-		<section className={styles.HeroSectionPage}>
-			<div className={styles.HeroSection}>
-				<div className={styles.ContentContainer}>
-					<h1 className={styles.Heading}>
+		<section>
+			<div>
+				<div>
+					<h1>
 						Become Distinguished, Different & <span>Skilled</span>
 					</h1>
-					<h4 className={styles.SubHeading}>
+					<h4>
 						Now manage, Compare & showcase your whole learning journey at one
 						place. Save time & money.
 					</h4>
-					<form className={styles.HeroForm}>
-						<input
-							type='email'
-							placeholder='Enter your email'
-							className={styles.EmailInput}
-						/>
+					<form>
+						<input type='email' placeholder='Enter your email' />
 						<Button type='submit' aria-label='Join beta accses'>
 							<svg
-								className={styles.BtnSVG}
 								width='32'
 								height='16'
 								viewBox='0 0 32 16'
@@ -38,7 +32,7 @@ const HeroSection = () => {
 							</svg>
 						</Button>
 					</form>
-					<p className={styles.Para}>
+					<p>
 						Don’t worry, we won’t charge our alpha users. Free forever{' '}
 						<Link
 							href='/'
@@ -48,10 +42,9 @@ const HeroSection = () => {
 							join now.
 						</Link>
 					</p>
-					<div className={styles.NewsBanner}></div>
 				</div>
-				<div className={styles.HeroSVGContainer}>
-					<div className={styles.HeroPeopleSVGContainer}>
+				<div>
+					<div>
 						<HeroSectionSVG />
 					</div>
 				</div>

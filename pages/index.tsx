@@ -6,7 +6,7 @@ import Navbar from 'sections/navbar/Navbar';
 import Footer from 'sections/footer/Footer';
 
 // Section Components
-import HeroSection from 'sections/landingPage/hero/HeroSection';
+// import HeroSection from 'sections/landingPage/hero/HeroSection';
 import DetailsSection from 'sections/landingPage/details/DetailsSection';
 import BenefitsSection from 'sections/landingPage/benefits/BenefitsSection';
 import NewsletterSection from 'sections/landingPage/newsletter/NewsletterSection';
@@ -19,7 +19,7 @@ const Home: NextPage = () => {
 			</Head>
 			<Navbar />
 			<main>
-				<HeroSection />
+				{/* <HeroSection /> */}
 				<DetailsSection />
 				<BenefitsSection />
 				<NewsletterSection />

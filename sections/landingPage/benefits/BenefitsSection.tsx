@@ -3,15 +3,13 @@ import ExclusiveAccessSVG from 'assets/sections/benefits/exclusive_access.svg';
 import VIPTreatmentSVG from 'assets/sections/benefits/vip_treatment.svg';
 import SupriseSVG from 'assets/sections/benefits/suprise.svg';
 
-import styles from './BenefitsSection.module.scss';
-
 const BenefitsSection = () => {
 	return (
-		<section className={styles.BenefitsSection}>
-			<h2 className={styles.SectionHeading}>
+		<section>
+			<h2>
 				Join at alpha phase and get exclusive
-				<div className={styles.SectionHeadingHighlightContainer}>
-					<h2 className={styles.SectionHeadingHighlight}>benefits</h2>
+				<div>
+					<h2>benefits</h2>
 					<svg
 						width='158'
 						height='82'
@@ -53,25 +51,25 @@ const BenefitsSection = () => {
 					</svg>
 				</div>
 			</h2>
-			<div className={styles.BenefitsContainer}>
-				<div className={styles.BenefitsWrapper}>
-					<div className={styles.Benefits}>
+			<div>
+				<div>
+					<div>
 						<FreeForeverSVG />
-						<p className={styles.BenefitsPara}>Free Forever</p>
+						<p>Free Forever</p>
 					</div>
-					<div className={styles.Benefits}>
+					<div>
 						<ExclusiveAccessSVG />
-						<p className={styles.BenefitsPara}>Exclusive Access</p>
+						<p>Exclusive Access</p>
 					</div>
 				</div>
-				<div className={styles.BenefitsWrapper}>
-					<div className={styles.Benefits}>
+				<div>
+					<div>
 						<VIPTreatmentSVG />
-						<p className={styles.BenefitsPara}>VIP Treatment</p>
+						<p>VIP Treatment</p>
 					</div>
-					<div className={styles.Benefits}>
+					<div>
 						<SupriseSVG />
-						<p className={styles.BenefitsPara}>{"That's Suprise"}</p>
+						<p>{"That's Suprise"}</p>
 					</div>
 				</div>
 			</div>

@@ -6,7 +6,6 @@
 */
 
 import Link from 'next/link';
-import styles from './Link.module.scss';
 
 interface LinkProps {
 	href: string;
@@ -27,12 +26,7 @@ export default function ({
 	if (type === 'light') {
 		return (
 			<Link href={href} passHref>
-				<a
-					className={styles.LightLink}
-					title={title}
-					aria-label={ariaLabel}
-					{...props}
-				>
+				<a title={title} aria-label={ariaLabel} {...props}>
 					{children}
 				</a>
 			</Link>
@@ -42,12 +36,7 @@ export default function ({
 	if (type === 'action-light') {
 		return (
 			<Link href={href} passHref>
-				<a
-					className={styles.ActionLightLink}
-					title={title}
-					aria-label={ariaLabel}
-					{...props}
-				>
+				<a title={title} aria-label={ariaLabel} {...props}>
 					{children}
 				</a>
 			</Link>
@@ -57,12 +46,7 @@ export default function ({
 	if (type === 'action-dark') {
 		return (
 			<Link href={href} passHref>
-				<a
-					className={styles.ActionDarkLink}
-					title={title}
-					aria-label={ariaLabel}
-					{...props}
-				>
+				<a title={title} aria-label={ariaLabel} {...props}>
 					{children}
 				</a>
 			</Link>
@@ -71,12 +55,7 @@ export default function ({
 
 	return (
 		<Link href={href} passHref>
-			<a
-				className={styles.Link}
-				title={title}
-				aria-label={ariaLabel}
-				{...props}
-			>
+			<a title={title} aria-label={ariaLabel} {...props}>
 				{children}
 			</a>
 		</Link>

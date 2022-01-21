@@ -1,120 +1,118 @@
 import Link from 'components/link/Link';
 
-import styles from './Footer.module.scss';
-
 const Footer = () => {
 	return (
-		<footer className={styles.Footer}>
-			<div className={styles.Footer_Row}>
-				<div className={styles.Footer_Column}>
-					<h3 className={styles.Content_Heading}>Product</h3>
-					<ul className={styles.Footer_Page_Link_Container}>
-						<li className={styles.Footer_Page_Link}>
+		<footer>
+			<div>
+				<div>
+					<h3>Product</h3>
+					<ul>
+						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
 								Drozee Overview
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
+						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
 								Learning Path
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
+						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
 								StepDegree
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
+						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
 								Skill Match
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
+						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
 								TopSlot
 							</Link>
 						</li>
 					</ul>
 				</div>
-				<div className={styles.Footer_Column}>
-					<h3 className={styles.Content_Heading}>Company</h3>
-					<ul className={styles.Footer_Page_Link_Container}>
-						<li className={styles.Footer_Page_Link}>
+				<div>
+					<h3>Company</h3>
+					<ul>
+						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
 								About Us
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
+						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
 								Career
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
+						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
 								Spotlight
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
+						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
 								Customer Stories
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
+						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
 								Our Heros
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
+						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
 								Pricing
 							</Link>
 						</li>
 					</ul>
 				</div>
-				<div className={styles.Footer_Column}>
-					<h3 className={styles.Content_Heading}>Resources</h3>
-					<ul className={styles.Footer_Page_Link_Container}>
-						<li className={styles.Footer_Page_Link}>
+				<div>
+					<h3>Resources</h3>
+					<ul>
+						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
 								Help Center
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
+						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
 								Blog
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
+						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
 								Community
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
+						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
 								Developers (for open source)
 							</Link>
 						</li>
 					</ul>
 				</div>
-				<div className={styles.Footer_Column}>
-					<h3 className={styles.Content_Heading}>Partners</h3>
-					<ul className={styles.Footer_Page_Link_Container}>
-						<li className={styles.Footer_Page_Link}>
+				<div>
+					<h3>Partners</h3>
+					<ul>
+						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
 								Academics
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
+						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
 								Corporates
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
+						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
 								Recruiters
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
+						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
 								Startups
 							</Link>
@@ -122,12 +120,10 @@ const Footer = () => {
 					</ul>
 				</div>
 			</div>
-			<div className={styles.Footer_Copyright_Container}>
-				<p className={styles.Footer_Copyright_Para}>
-					Copyright © 2022 Drozee. All rights reserved.
-				</p>
-				<ul className={styles.Footer_SocialLink_Container}>
-					<li className={styles.FooterLink}>
+			<div>
+				<p>Copyright © 2022 Drozee. All rights reserved.</p>
+				<ul>
+					<li>
 						<Link href='/' title='Facebook' ariaLabel='Facebook' type='light'>
 							<svg
 								width='10'
@@ -143,7 +139,7 @@ const Footer = () => {
 							</svg>
 						</Link>
 					</li>
-					<li className={styles.FooterLink}>
+					<li>
 						<Link href='/' title='Twitter' ariaLabel='Twitter' type='light'>
 							<svg
 								width='23'
@@ -159,7 +155,7 @@ const Footer = () => {
 							</svg>
 						</Link>
 					</li>
-					<li className={styles.FooterLink}>
+					<li>
 						<Link href='/' title='Instagram' ariaLabel='Instagram' type='light'>
 							<svg
 								width='23'
@@ -190,7 +186,7 @@ const Footer = () => {
 							</svg>
 						</Link>
 					</li>
-					<li className={styles.FooterLink}>
+					<li>
 						<Link href='/' title='Linkedin' ariaLabel='Linkedin' type='light'>
 							<svg
 								width='23'
