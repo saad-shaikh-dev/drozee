@@ -38,7 +38,12 @@ const Footer = () => {
 					<h3 className='text-2xl font-bold mb-4'>Company</h3>
 					<ul className='flex flex-col justify-start items-start gap-2'>
 						<li>
-							<Link href='/' type='light' title='' ariaLabel=''>
+							<Link
+								href='/about-us'
+								type='light'
+								title='About Us'
+								ariaLabel='About Us'
+							>
 								About Us
 							</Link>
 						</li>
