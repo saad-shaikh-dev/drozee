@@ -26,7 +26,12 @@ export default function ({
 	if (type === 'light') {
 		return (
 			<Link href={href} passHref>
-				<a title={title} aria-label={ariaLabel} {...props}>
+				<a
+					className='text-[1em]'
+					title={title}
+					aria-label={ariaLabel}
+					{...props}
+				>
 					{children}
 				</a>
 			</Link>

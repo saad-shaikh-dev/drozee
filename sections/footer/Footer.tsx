@@ -2,11 +2,11 @@ import Link from 'components/link/Link';
 
 const Footer = () => {
 	return (
-		<footer>
-			<div>
-				<div>
-					<h3>Product</h3>
-					<ul>
+		<footer className='bg-primary text-white'>
+			<div className='py-28 flex justify-evenly items-start'>
+				<div className=''>
+					<h3 className='text-2xl font-bold mb-4'>Product</h3>
+					<ul className='flex flex-col justify-start items-start gap-2'>
 						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
 								Drozee Overview
@@ -34,9 +34,9 @@ const Footer = () => {
 						</li>
 					</ul>
 				</div>
-				<div>
-					<h3>Company</h3>
-					<ul>
+				<div className=''>
+					<h3 className='text-2xl font-bold mb-4'>Company</h3>
+					<ul className='flex flex-col justify-start items-start gap-2'>
 						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
 								About Us
@@ -69,9 +69,9 @@ const Footer = () => {
 						</li>
 					</ul>
 				</div>
-				<div>
-					<h3>Resources</h3>
-					<ul>
+				<div className=''>
+					<h3 className='text-2xl font-bold mb-4'>Resources</h3>
+					<ul className='flex flex-col justify-start items-start gap-2'>
 						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
 								Help Center
@@ -94,9 +94,9 @@ const Footer = () => {
 						</li>
 					</ul>
 				</div>
-				<div>
-					<h3>Partners</h3>
-					<ul>
+				<div className=''>
+					<h3 className='text-2xl font-bold mb-4'>Partners</h3>
+					<ul className='flex flex-col justify-start items-start gap-2'>
 						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
 								Academics
@@ -120,9 +120,9 @@ const Footer = () => {
 					</ul>
 				</div>
 			</div>
-			<div>
-				<p>Copyright © 2022 Drozee. All rights reserved.</p>
-				<ul>
+			<div className='bg-primary-dark px-20 py-8 flex justify-between items-center gap-5'>
+				<p className='text-xs'>Copyright © 2022 Drozee. All rights reserved.</p>
+				<ul className='flex justify-evenly items-center gap-8'>
 					<li>
 						<Link href='/' title='Facebook' ariaLabel='Facebook' type='light'>
 							<svg
