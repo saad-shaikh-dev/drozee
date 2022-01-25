@@ -5,12 +5,13 @@ import SupriseSVG from 'assets/sections/benefits/suprise.svg';
 
 const BenefitsSection = () => {
 	return (
-		<section>
-			<h2>
+		<section className='pt-20 pb-24 px-10 bg-primary-light'>
+			<h2 className='text-center text-2xl font-extrabold'>
 				Join at alpha phase and get exclusive
-				<div>
-					<h2>benefits</h2>
+				<div className='inline-block w-max relative ml-4'>
+					<h2 className='text-white relative z-[1]'>benefits</h2>
 					<svg
+						className='absolute -top-3 -left-4'
 						width='158'
 						height='82'
 						viewBox='0 0 158 82'
@@ -51,23 +52,23 @@ const BenefitsSection = () => {
 					</svg>
 				</div>
 			</h2>
-			<div>
-				<div>
-					<div>
+			<div className='mt-16 mx-auto max-w-4xl flex flex-col lg:flex-row justify-center items-stretch lg:items-center'>
+				<div className='flex-1 flex justify-evenly lg:justify-evenly items-center'>
+					<div className='flex-1 flex flex-col justify-center items-center gap-4'>
 						<FreeForeverSVG />
 						<p>Free Forever</p>
 					</div>
-					<div>
+					<div className='flex-1 flex flex-col justify-center items-center gap-4'>
 						<ExclusiveAccessSVG />
 						<p>Exclusive Access</p>
 					</div>
 				</div>
-				<div>
-					<div>
+				<div className='flex-1 flex justify-evenly items-center'>
+					<div className='flex-1 flex flex-col justify-center items-center gap-4'>
 						<VIPTreatmentSVG />
 						<p>VIP Treatment</p>
 					</div>
-					<div>
+					<div className='flex-1 flex flex-col justify-center items-center gap-4'>
 						<SupriseSVG />
 						<p>{"That's Suprise"}</p>
 					</div>

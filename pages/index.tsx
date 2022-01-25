@@ -8,7 +8,7 @@ import Footer from 'sections/footer/Footer';
 // Section Components
 // import HeroSection from 'sections/landingPage/hero/HeroSection';
 // import DetailsSection from 'sections/landingPage/details/DetailsSection';
-// import BenefitsSection from 'sections/landingPage/benefits/BenefitsSection';
+import BenefitsSection from 'sections/landingPage/benefits/BenefitsSection';
 import NewsletterSection from 'sections/landingPage/newsletter/NewsletterSection';
 
 const Home: NextPage = () => {
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
 			<main>
 				{/* <HeroSection /> */}
 				{/* <DetailsSection /> */}
-				{/* <BenefitsSection /> */}
+				<BenefitsSection />
 				<NewsletterSection />
 			</main>
 			<Footer />
