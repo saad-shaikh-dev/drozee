@@ -1,19 +1,18 @@
 import Emoji from 'components/emoji/Emoji';
 
-import HeadingSVG from 'assets/sections/details/heading_background.svg';
 import FirstSVG from 'assets/sections/details/detail_first.svg';
 import SecondSVG from 'assets/sections/details/detail_second.svg';
 import ThirdSVG from 'assets/sections/details/detail_third.svg';
 
 const DetailsSection = () => {
 	return (
-		<section>
-			<h2>
+		<section className='py-20 px-16'>
+			<h2 className='max-w-xl mx-auto text-center text-3xl font-extrabold'>
 				Join to become part of fastest growing community
-				<div>
-					<h2>why?</h2>
-					{/* <HeadingSVG /> */}
+				<div className='inline-block w-max relative ml-4'>
+					<h2 className='text-white relative z-[1]'>why?</h2>
 					<svg
+						className='absolute -top-2 -left-4'
 						width='114'
 						height='82'
 						viewBox='0 0 114 82'
@@ -53,67 +52,67 @@ const DetailsSection = () => {
 					</svg>
 				</div>
 			</h2>
-			<div>
-				<div>
-					<div>
+			<div className='mt-40 flex flex-col gap-40'>
+				<div className='flex justify-between items-start'>
+					<div className='min-w-[450px] flex justify-center items-center bg-primary rounded-tr-3xl rounded-br-3xl'>
 						<FirstSVG />
 					</div>
-					<div>
-						<h3>
+					<div className='max-w-2xl flex flex-col gap-5'>
+						<h3 className='text-5xl font-extrabold leading-tight'>
 							Become a better version of you,
-							<span> Everyday!</span>
+							<span className='text-support-1'> Everyday!</span>
 						</h3>
-						<p>
+						<p className='text-xl'>
 							Follow AI Guided learning Recommendation, compare 1000s of
 							courses. Learn only those skills that are required! Follow tips &
 							sugesions to stand ahead of rat race.
 						</p>
-						<p>
-							<span>Fun Part: </span>We don’t own a single paid course. Ours
-							will be free. God promise.{' '}
+						<p className='text-xl'>
+							<span className='text-secondary font-medium'>Fun Part: </span>We
+							don’t own a single paid course. Ours will be free. God promise.{' '}
 							<Emoji symbol='&#128526;' label='smiling face with sunglasses' />
 						</p>
 					</div>
 				</div>
-				<div>
-					<div>
-						<h3>
+				<div className='flex justify-between items-start'>
+					<div className='order-2 min-w-[450px] flex justify-center items-center bg-primary rounded-tl-3xl rounded-bl-3xl'>
+						<SecondSVG />
+					</div>
+					<div className='order-1 max-w-2xl flex flex-col gap-5'>
+						<h3 className='text-5xl font-extrabold leading-tight'>
 							Let us sort everything for you,
-							<span> Important One!</span>
+							<span className='text-support-2'> Important One!</span>
 						</h3>
-						<p>
+						<p className='text-xl'>
 							CV, Portfolio, Academics documents & your skill certificates.
 							Everything will be at one place, Seriously that paper file system
 							is outdated and corporate trust us.
 						</p>
-						<p>
-							<span>Bonus: </span>
-							We’ll reward you for your activities with points or vouchers.
+						<p className='text-xl'>
+							<span className='text-secondary font-medium'>Bonus: </span>
+							We’ll reward you for your activities with points or vouchers.{' '}
 							<Emoji symbol='&#127881;' label='celebration, party hat' />
 						</p>
 					</div>
-					<div>
-						<SecondSVG />
-					</div>
 				</div>
-				<div>
-					<div>
+				<div className='flex justify-between items-start'>
+					<div className='min-w-[450px] flex justify-center items-center bg-primary rounded-tr-3xl rounded-br-3xl'>
 						<ThirdSVG />
 					</div>
-					<div>
-						<h3>
+					<div className='max-w-2xl flex flex-col gap-5'>
+						<h3 className='text-5xl font-extrabold leading-tight'>
 							Something should be surprise,
-							<span> Signup Now!</span>
+							<span className='text-support-3'> Signup Now!</span>
 						</h3>
-						<p>
+						<p className='text-xl'>
 							Our team of good product designers & developers are working day &
 							night to introduce new features. Jobs, Interships & many more
 							coming soon.
 						</p>
-						<p>
-							<span>Secret: </span>
+						<p className='text-xl'>
+							<span className='text-secondary font-medium'>Secret: </span>
 							We’re too excited so typed random features and now we have to work
-							on random features.
+							on random features.{' '}
 							<Emoji
 								symbol='&#128517;'
 								label='smiling face with open mouth and cold sweat emoji'

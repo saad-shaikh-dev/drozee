@@ -1,7 +1,7 @@
 const NewsletterSection = () => {
 	return (
 		<section className='overflow-hidden relative pt-36 pb-52 px-8'>
-			<h2 className='text-center text-2xl font-extrabold'>
+			<h2 className='text-center text-3xl font-extrabold'>
 				Subscribe to your newsletter & get latest updates!
 			</h2>
 			<form className='mt-14 relative z-[1] flex justify-center items-center'>
