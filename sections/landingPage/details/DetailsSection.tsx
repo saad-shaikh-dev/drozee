@@ -6,8 +6,8 @@ import ThirdSVG from 'assets/sections/details/detail_third.svg';
 
 const DetailsSection = () => {
 	return (
-		<section className='py-20 px-16'>
-			<h2 className='max-w-xl mx-auto text-center text-3xl font-extrabold'>
+		<section className='py-20 px-24'>
+			<h2 className='max-w-xl mx-auto text-center text-3xl font-bold font-serif'>
 				Join to become part of fastest growing community
 				<div className='inline-block w-max relative ml-4'>
 					<h2 className='text-white relative z-[1]'>why?</h2>
@@ -54,11 +54,14 @@ const DetailsSection = () => {
 			</h2>
 			<div className='mt-40 flex flex-col gap-40'>
 				<div className='flex justify-between items-start'>
-					<div className='min-w-[450px] flex justify-center items-center bg-primary rounded-tr-3xl rounded-br-3xl'>
-						<FirstSVG />
+					<div className='min-w-[450px] min-h-[362px] relative'>
+						<div className='w-full h-[90%] bg-primary rounded-tr-3xl rounded-br-3xl absolute bottom-0 left-0 -z-[1]'></div>
+						<div className='w-full h-full flex justify-center items-center relative -top-12'>
+							<FirstSVG />
+						</div>
 					</div>
 					<div className='max-w-2xl flex flex-col gap-5'>
-						<h3 className='text-5xl font-extrabold leading-tight'>
+						<h3 className='text-5xl font-serif leading-tight'>
 							Become a better version of you,
 							<span className='text-support-1'> Everyday!</span>
 						</h3>
@@ -75,11 +78,14 @@ const DetailsSection = () => {
 					</div>
 				</div>
 				<div className='flex justify-between items-start'>
-					<div className='order-2 min-w-[450px] flex justify-center items-center bg-primary rounded-tl-3xl rounded-bl-3xl'>
-						<SecondSVG />
+					<div className='order-2 min-w-[450px] min-h-[362px] relative'>
+						<div className='w-full h-[90%] bg-primary rounded-tl-3xl rounded-bl-3xl absolute bottom-0 left-0 -z-[1]'></div>
+						<div className='w-full h-full flex justify-center items-center relative -top-12'>
+							<SecondSVG />
+						</div>
 					</div>
 					<div className='order-1 max-w-2xl flex flex-col gap-5'>
-						<h3 className='text-5xl font-extrabold leading-tight'>
+						<h3 className='text-5xl font-serif leading-tight'>
 							Let us sort everything for you,
 							<span className='text-support-2'> Important One!</span>
 						</h3>
@@ -96,11 +102,14 @@ const DetailsSection = () => {
 					</div>
 				</div>
 				<div className='flex justify-between items-start'>
-					<div className='min-w-[450px] flex justify-center items-center bg-primary rounded-tr-3xl rounded-br-3xl'>
-						<ThirdSVG />
+					<div className='min-w-[450px] min-h-[362px] relative'>
+						<div className='w-full h-[90%] bg-primary rounded-tr-3xl rounded-br-3xl absolute bottom-0 left-0 -z-[1]'></div>
+						<div className='w-full h-full flex justify-center items-center relative -top-12'>
+							<ThirdSVG />
+						</div>
 					</div>
 					<div className='max-w-2xl flex flex-col gap-5'>
-						<h3 className='text-5xl font-extrabold leading-tight'>
+						<h3 className='text-5xl font-serif leading-tight'>
 							Something should be surprise,
 							<span className='text-support-3'> Signup Now!</span>
 						</h3>

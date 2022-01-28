@@ -31,7 +31,8 @@ module.exports = {
 				secondary: withOpacity('--clr-text-secondary')
 			},
 			fontFamily: {
-				sans: ['Montserrat', ...defaultTheme.fontFamily.sans]
+				sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+				serif: ['DM Serif Display', ...defaultTheme.fontFamily.serif]
 			}
 		}
 	},

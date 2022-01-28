@@ -5,7 +5,9 @@ const Footer = () => {
 		<footer className='bg-primary text-white'>
 			<div className='py-28 flex justify-evenly items-start'>
 				<div className=''>
-					<h3 className='text-2xl font-bold mb-4'>Product</h3>
+					<h3 className='mb-4 text-3xl tracking-wider font-bold font-serif'>
+						Product
+					</h3>
 					<ul className='flex flex-col justify-start items-start gap-2'>
 						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
@@ -35,7 +37,9 @@ const Footer = () => {
 					</ul>
 				</div>
 				<div className=''>
-					<h3 className='text-2xl font-bold mb-4'>Company</h3>
+					<h3 className='mb-4 text-3xl tracking-wider font-bold font-serif'>
+						Company
+					</h3>
 					<ul className='flex flex-col justify-start items-start gap-2'>
 						<li>
 							<Link
@@ -75,7 +79,9 @@ const Footer = () => {
 					</ul>
 				</div>
 				<div className=''>
-					<h3 className='text-2xl font-bold mb-4'>Resources</h3>
+					<h3 className='mb-4 text-3xl tracking-wider font-bold font-serif'>
+						Resources
+					</h3>
 					<ul className='flex flex-col justify-start items-start gap-2'>
 						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
@@ -94,13 +100,15 @@ const Footer = () => {
 						</li>
 						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
-								Developers (for open source)
+								Developers
 							</Link>
 						</li>
 					</ul>
 				</div>
 				<div className=''>
-					<h3 className='text-2xl font-bold mb-4'>Partners</h3>
+					<h3 className='mb-4 text-3xl tracking-wider font-bold font-serif'>
+						Partners
+					</h3>
 					<ul className='flex flex-col justify-start items-start gap-2'>
 						<li>
 							<Link href='/' type='light' title='' ariaLabel=''>
@@ -125,7 +133,7 @@ const Footer = () => {
 					</ul>
 				</div>
 			</div>
-			<div className='bg-primary-dark px-20 py-8 flex justify-between items-center gap-5'>
+			<div className='bg-primary-dark px-36 py-8 flex justify-between items-center gap-5'>
 				<p className='text-xs'>Copyright © 2022 Drozee. All rights reserved.</p>
 				<ul className='flex justify-evenly items-center gap-8'>
 					<li>

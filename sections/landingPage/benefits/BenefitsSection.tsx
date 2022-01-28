@@ -6,7 +6,7 @@ import SupriseSVG from 'assets/sections/benefits/suprise.svg';
 const BenefitsSection = () => {
 	return (
 		<section className='pt-20 pb-24 px-10 bg-primary-light'>
-			<h2 className='text-center text-3xl font-extrabold'>
+			<h2 className='text-center text-3xl font-bold font-serif'>
 				Join at alpha phase and get exclusive
 				<div className='inline-block w-max relative ml-4'>
 					<h2 className='text-white relative z-[1]'>benefits</h2>
