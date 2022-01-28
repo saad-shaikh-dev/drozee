@@ -2,11 +2,11 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 
 // Layout Components
-// import Navbar from 'sections/navbar/Navbar';
+import Navbar from 'sections/navbar/Navbar';
 import Footer from 'sections/footer/Footer';
 
 // Section Components
-// import HeroSection from 'sections/landingPage/hero/HeroSection';
+import HeroSection from 'sections/landingPage/hero/HeroSection';
 import DetailsSection from 'sections/landingPage/details/DetailsSection';
 import BenefitsSection from 'sections/landingPage/benefits/BenefitsSection';
 import NewsletterSection from 'sections/landingPage/newsletter/NewsletterSection';
@@ -17,9 +17,9 @@ const Home: NextPage = () => {
 			<Head>
 				<title>Drozee</title>
 			</Head>
-			{/* <Navbar /> */}
+			<Navbar />
 			<main>
-				{/* <HeroSection /> */}
+				<HeroSection />
 				<DetailsSection />
 				<BenefitsSection />
 				<NewsletterSection />

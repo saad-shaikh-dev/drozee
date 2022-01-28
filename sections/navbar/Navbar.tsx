@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import Link from 'components/link/Link';
+import Link from 'next/link';
 import MonitorLogo from 'assets/logo/big_primary_dashed_logo.svg';
 import PrimaryLogo from 'assets/logo/small_primary_dashed_logo.svg';
 import WhiteLogo from 'assets/logo/small_white_dashed_logo.svg';
@@ -15,19 +15,29 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav>
-			<div>
-				<div>
-					<Link href='/' title='Logo' ariaLabel='Logo'>
-						<MonitorLogo />
-						<p>Drozee</p>
+		<nav className='w-full absolute top-2 left-0 right-0 min-h-[8vh]'>
+			<div className='py-6 px-20 flex justify-between items-center'>
+				<div className='w-max'>
+					<Link href='/' passHref>
+						<a
+							title='Home'
+							aria-label='Home'
+							className='flex justify-center items-center gap-3'
+						>
+							<MonitorLogo aria-label='Logo' />
+							<p className='text-xl font-medium text-primary'>Drozee</p>
+						</a>
 					</Link>
 				</div>
-				<ul>
+				<ul className='flex justify-center items-center gap-12'>
 					<li>
-						<Link href='/' type='light' title='Partners' ariaLabel='Partners'>
-							<span>
-								<p>Partners</p>
+						<Link href='/' passHref>
+							<a
+								title='Products'
+								aria-label='Products'
+								className='flex justify-center items-center gap-2 text-white'
+							>
+								<p>Products</p>
 								<svg
 									width='9'
 									height='5'
@@ -42,50 +52,47 @@ const Navbar = () => {
 										strokeLinecap='round'
 									/>
 								</svg>
-							</span>
+							</a>
 						</Link>
 					</li>
 					<li>
-						<Link href='/' type='light' title='Features' ariaLabel='Features'>
-							Features
+						<Link href='/' passHref>
+							<a className='text-white'>Know us</a>
 						</Link>
 					</li>
 					<li>
-						<Link
-							href='/'
-							type='action-light'
-							title='Beta Access'
-							ariaLabel='Beta Access'
-						>
-							Alpha Access
+						<Link href='/' passHref>
+							<a className='text-white'>Partners</a>
+						</Link>
+					</li>
+					<li>
+						<Link href='/' passHref>
+							<a className='bg-primary-light text-primary py-3 px-7 rounded-3xl font-semibold text-base'>
+								Alpha Access
+							</a>
 						</Link>
 					</li>
 				</ul>
 			</div>
-			<div>
+			{/* <div>
 				<div>
-					<Link href='/' title='Logo' ariaLabel='Logo'>
+					<Link href='/' passHref>
 						{menu ? <WhiteLogo /> : <PrimaryLogo />}
 					</Link>
 				</div>
 				<ul>
 					<li>
-						<Link href='/' type='light' title='Partners' ariaLabel='Partners'>
-							Partners
+						<Link href='/' passHref>
+							Products
 						</Link>
 					</li>
 					<li>
-						<Link href='/' type='light' title='Features' ariaLabel='Features'>
+						<Link href='/' passHref>
 							Features
 						</Link>
 					</li>
 					<li>
-						<Link
-							href='/'
-							type='action-light'
-							title='Beta Access'
-							ariaLabel='Beta Access'
-						>
+						<Link href='/' passHref>
 							Alpha Access
 						</Link>
 					</li>
@@ -95,7 +102,7 @@ const Navbar = () => {
 					<span></span>
 					<span></span>
 				</button>
-			</div>
+			</div> */}
 		</nav>
 	);
 };
