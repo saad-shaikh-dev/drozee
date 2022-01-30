@@ -31,43 +31,95 @@ const Navbar = () => {
 				</div>
 				<ul className='flex justify-center items-center gap-12'>
 					<li>
-						<Link href='/' passHref>
-							<a
-								title='Products'
-								aria-label='Products'
-								className='flex justify-center items-center gap-2 text-white'
+						<div
+							title='Products'
+							aria-label='Products'
+							className='flex justify-center items-center gap-2 text-white cursor-pointer group relative'
+						>
+							<p>Products</p>
+							<svg
+								width='9'
+								height='5'
+								viewBox='0 0 9 5'
+								fill='none'
+								xmlns='http://www.w3.org/2000/svg'
 							>
-								<p>Products</p>
-								<svg
-									width='9'
-									height='5'
-									viewBox='0 0 9 5'
-									fill='none'
-									xmlns='http://www.w3.org/2000/svg'
-								>
-									<path
-										d='M1 1L4.5 4L8 1'
-										stroke='white'
-										strokeWidth='1.5'
-										strokeLinecap='round'
-									/>
-								</svg>
+								<path
+									d='M1 1L4.5 4L8 1'
+									stroke='white'
+									strokeWidth='1.5'
+									strokeLinecap='round'
+								/>
+							</svg>
+							<ul className='hidden group-hover:block w-max absolute top-6 left-0 z-10 bg-white text-black rounded-lg py-4 px-8'>
+								<li className='py-1'>
+									<Link href='/' passHref>
+										<a
+											title='Folio'
+											aria-label='Folio'
+											className='hover:text-secondary'
+										>
+											Folio
+										</a>
+									</Link>
+								</li>
+								<li className='py-1'>
+									<Link href='/' passHref>
+										<a
+											title='Learn Track'
+											aria-label='Learn Track'
+											className='hover:text-secondary'
+										>
+											LearnTrack
+										</a>
+									</Link>
+								</li>
+								<li className='py-1'>
+									<Link href='/' passHref>
+										<a
+											title='Learn Path'
+											aria-label='Learn Path'
+											className='hover:text-secondary'
+										>
+											LearnPath
+										</a>
+									</Link>
+								</li>
+								<li className='py-1'>
+									<Link href='/' passHref>
+										<a
+											title='StepDegree'
+											aria-label='StepDegree'
+											className='hover:text-secondary'
+										>
+											StepDegree
+										</a>
+									</Link>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<Link href='/' passHref>
+							<a className='text-white' title='Know us' aria-label='Know us'>
+								Know us
 							</a>
 						</Link>
 					</li>
 					<li>
 						<Link href='/' passHref>
-							<a className='text-white'>Know us</a>
+							<a className='text-white' title='Partners' aria-label='Partners'>
+								Partners
+							</a>
 						</Link>
 					</li>
 					<li>
 						<Link href='/' passHref>
-							<a className='text-white'>Partners</a>
-						</Link>
-					</li>
-					<li>
-						<Link href='/' passHref>
-							<a className='bg-primary-light text-primary py-3 px-7 rounded-3xl font-semibold text-base'>
+							<a
+								className='bg-primary-light text-primary py-3 px-7 rounded-3xl font-semibold text-base'
+								title='Alpha Access'
+								aria-label='Alpha Access'
+							>
 								Alpha Access
 							</a>
 						</Link>
