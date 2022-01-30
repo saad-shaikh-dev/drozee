@@ -72,7 +72,12 @@ const Footer = () => {
 							</Link>
 						</li>
 						<li>
-							<Link href='/' type='light' title='Career' ariaLabel='Career'>
+							<Link
+								href='/career'
+								type='light'
+								title='Career'
+								ariaLabel='Career'
+							>
 								Career
 							</Link>
 						</li>
