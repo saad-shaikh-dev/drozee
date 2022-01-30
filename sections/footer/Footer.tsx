@@ -10,27 +10,47 @@ const Footer = () => {
 					</h3>
 					<ul className='flex flex-col justify-start items-start gap-2'>
 						<li>
-							<Link href='/' type='light' title='' ariaLabel=''>
+							<Link
+								href='/'
+								type='light'
+								title='Drozee Overview'
+								ariaLabel='Drozee Overview'
+							>
 								Drozee Overview
 							</Link>
 						</li>
 						<li>
-							<Link href='/' type='light' title='' ariaLabel=''>
-								Learning Path
+							<Link
+								href='/'
+								type='light'
+								title='Learn Path'
+								ariaLabel='Learn Path'
+							>
+								LearnPath
 							</Link>
 						</li>
 						<li>
-							<Link href='/' type='light' title='' ariaLabel=''>
+							<Link
+								href='/'
+								type='light'
+								title='StepDegree'
+								ariaLabel='StepDegree'
+							>
 								StepDegree
 							</Link>
 						</li>
 						<li>
-							<Link href='/' type='light' title='' ariaLabel=''>
+							<Link
+								href='/'
+								type='light'
+								title='Skill Match'
+								ariaLabel='Skill Match'
+							>
 								Skill Match
 							</Link>
 						</li>
 						<li>
-							<Link href='/' type='light' title='' ariaLabel=''>
+							<Link href='/' type='light' title='TopSlot' ariaLabel='TopSlot'>
 								TopSlot
 							</Link>
 						</li>
@@ -52,27 +72,42 @@ const Footer = () => {
 							</Link>
 						</li>
 						<li>
-							<Link href='/' type='light' title='' ariaLabel=''>
+							<Link href='/' type='light' title='Career' ariaLabel='Career'>
 								Career
 							</Link>
 						</li>
 						<li>
-							<Link href='/' type='light' title='' ariaLabel=''>
+							<Link
+								href='/'
+								type='light'
+								title='Spotlight'
+								ariaLabel='Spotlight'
+							>
 								Spotlight
 							</Link>
 						</li>
 						<li>
-							<Link href='/' type='light' title='' ariaLabel=''>
+							<Link
+								href='/'
+								type='light'
+								title='Customer Stories'
+								ariaLabel='Customer Stories'
+							>
 								Customer Stories
 							</Link>
 						</li>
 						<li>
-							<Link href='/' type='light' title='' ariaLabel=''>
-								Our Heros
+							<Link
+								href='/'
+								type='light'
+								title='Our Heroes'
+								ariaLabel='Our Heroes'
+							>
+								Our Heroes
 							</Link>
 						</li>
 						<li>
-							<Link href='/' type='light' title='' ariaLabel=''>
+							<Link href='/' type='light' title='Pricing' ariaLabel='Pricing'>
 								Pricing
 							</Link>
 						</li>
@@ -84,22 +119,37 @@ const Footer = () => {
 					</h3>
 					<ul className='flex flex-col justify-start items-start gap-2'>
 						<li>
-							<Link href='/' type='light' title='' ariaLabel=''>
+							<Link
+								href='/'
+								type='light'
+								title='Help Center'
+								ariaLabel='Help Center'
+							>
 								Help Center
 							</Link>
 						</li>
 						<li>
-							<Link href='/' type='light' title='' ariaLabel=''>
+							<Link href='/' type='light' title='Blog' ariaLabel='Blog'>
 								Blog
 							</Link>
 						</li>
 						<li>
-							<Link href='/' type='light' title='' ariaLabel=''>
+							<Link
+								href='/'
+								type='light'
+								title='Community'
+								ariaLabel='Community'
+							>
 								Community
 							</Link>
 						</li>
 						<li>
-							<Link href='/' type='light' title='' ariaLabel=''>
+							<Link
+								href='/'
+								type='light'
+								title='Developers'
+								ariaLabel='Developer'
+							>
 								Developers
 							</Link>
 						</li>
@@ -111,22 +161,37 @@ const Footer = () => {
 					</h3>
 					<ul className='flex flex-col justify-start items-start gap-2'>
 						<li>
-							<Link href='/' type='light' title='' ariaLabel=''>
+							<Link
+								href='/'
+								type='light'
+								title='Academics'
+								ariaLabel='Academics'
+							>
 								Academics
 							</Link>
 						</li>
 						<li>
-							<Link href='/' type='light' title='' ariaLabel=''>
+							<Link
+								href='/'
+								type='light'
+								title='Corporates'
+								ariaLabel='Corporates'
+							>
 								Corporates
 							</Link>
 						</li>
 						<li>
-							<Link href='/' type='light' title='' ariaLabel=''>
+							<Link
+								href='/'
+								type='light'
+								title='Recruiters'
+								ariaLabel='Recruiters'
+							>
 								Recruiters
 							</Link>
 						</li>
 						<li>
-							<Link href='/' type='light' title='' ariaLabel=''>
+							<Link href='/' type='light' title='Startups' ariaLabel='Startups'>
 								Startups
 							</Link>
 						</li>
