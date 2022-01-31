@@ -1,11 +1,9 @@
 import { useState } from 'react';
 
-import Link from 'components/link/Link';
+import Link from 'next/link';
 import MonitorLogo from 'assets/logo/big_primary_dashed_logo.svg';
 import PrimaryLogo from 'assets/logo/small_primary_dashed_logo.svg';
 import WhiteLogo from 'assets/logo/small_white_dashed_logo.svg';
-
-import styles from './Navbar.module.scss';
 
 const Navbar = () => {
 	const [menu, showMenu] = useState(false);
@@ -16,105 +14,147 @@ const Navbar = () => {
 		showMenu(!prevMenuState);
 	};
 
-	let mobileNavbar = styles.CloseMenuMobileNavbar;
-	let mobileNavbarLinkContainer = styles.CloseMenuMobileNavbar_Links_Container;
-	let mobileMenuBtn = styles.CloseMenuBtn;
-
-	if (menu) {
-		mobileNavbar = [
-			styles.CloseMenuMobileNavbar,
-			styles.OpenMenuMobileNavbar
-		].join(' ');
-		mobileNavbarLinkContainer = [
-			styles.CloseMenuMobileNavbar_Links_Container,
-			styles.OpenMenuMobileNavbar_Links_Container
-		].join(' ');
-		mobileMenuBtn = [styles.CloseMenuBtn, styles.OpenMenuBtn].join(' ');
-	}
-
 	return (
-		<nav className={styles.Navbar}>
-			<div className={styles.MonitorNavbar}>
-				<div className={styles.MonitorLogo_Container}>
-					<Link href='/' title='Logo' ariaLabel='Logo'>
-						<MonitorLogo />
-						<p className={styles.Company_Name}>Drozee</p>
+		<nav className='w-full absolute top-2 left-0 right-0 min-h-[8vh]'>
+			<div className='py-6 px-20 flex justify-between items-center'>
+				<div className='w-max'>
+					<Link href='/' passHref>
+						<a
+							title='Home'
+							aria-label='Home'
+							className='flex justify-center items-center gap-3'
+						>
+							<MonitorLogo aria-label='Logo' />
+							<p className='text-xl font-medium text-primary'>Drozee</p>
+						</a>
 					</Link>
 				</div>
-				<ul className={styles.MonitorNavbar_Links_Container}>
-					<li className={styles.Navbar_Link}>
-						<Link href='/' type='light' title='Partners' ariaLabel='Partners'>
-							<span className={styles.Navbar_Link_Partners_Container}>
-								<p className={styles.Navbar_Link_Partners}>Partners</p>
-								<svg
-									className={styles.Navbar_Link_Partners_SVG}
-									width='9'
-									height='5'
-									viewBox='0 0 9 5'
-									fill='none'
-									xmlns='http://www.w3.org/2000/svg'
-								>
-									<path
-										d='M1 1L4.5 4L8 1'
-										stroke='white'
-										strokeWidth='1.5'
-										strokeLinecap='round'
-									/>
-								</svg>
-							</span>
-						</Link>
-					</li>
-					<li className={styles.Navbar_Link}>
-						<Link href='/' type='light' title='Features' ariaLabel='Features'>
-							Features
-						</Link>
-					</li>
-					<li className={styles.Navbar_Link}>
-						<Link
-							href='/'
-							type='action-light'
-							title='Beta Access'
-							ariaLabel='Beta Access'
+				<ul className='flex justify-center items-center gap-12'>
+					<li>
+						<div
+							title='Products'
+							aria-label='Products'
+							className='flex justify-center items-center gap-2 text-white cursor-pointer group relative'
 						>
-							Alpha Access
+							<p>Products</p>
+							<svg
+								width='9'
+								height='5'
+								viewBox='0 0 9 5'
+								fill='none'
+								xmlns='http://www.w3.org/2000/svg'
+							>
+								<path
+									d='M1 1L4.5 4L8 1'
+									stroke='white'
+									strokeWidth='1.5'
+									strokeLinecap='round'
+								/>
+							</svg>
+							<ul className='hidden group-hover:block w-max absolute top-6 left-0 z-10 bg-white text-black rounded-lg py-4 px-8'>
+								<li className='py-1'>
+									<Link href='/' passHref>
+										<a
+											title='Folio'
+											aria-label='Folio'
+											className='hover:text-secondary'
+										>
+											Folio
+										</a>
+									</Link>
+								</li>
+								<li className='py-1'>
+									<Link href='/' passHref>
+										<a
+											title='Learn Track'
+											aria-label='Learn Track'
+											className='hover:text-secondary'
+										>
+											LearnTrack
+										</a>
+									</Link>
+								</li>
+								<li className='py-1'>
+									<Link href='/' passHref>
+										<a
+											title='Learn Path'
+											aria-label='Learn Path'
+											className='hover:text-secondary'
+										>
+											LearnPath
+										</a>
+									</Link>
+								</li>
+								<li className='py-1'>
+									<Link href='/' passHref>
+										<a
+											title='StepDegree'
+											aria-label='StepDegree'
+											className='hover:text-secondary'
+										>
+											StepDegree
+										</a>
+									</Link>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<Link href='/' passHref>
+							<a className='text-white' title='Know us' aria-label='Know us'>
+								Know us
+							</a>
+						</Link>
+					</li>
+					<li>
+						<Link href='/' passHref>
+							<a className='text-white' title='Partners' aria-label='Partners'>
+								Partners
+							</a>
+						</Link>
+					</li>
+					<li>
+						<Link href='/alpha-access' passHref>
+							<a
+								className='bg-primary-light text-primary py-3 px-7 rounded-3xl font-semibold text-base hover:text-secondary'
+								title='Alpha Access'
+								aria-label='Alpha Access'
+							>
+								Alpha Access
+							</a>
 						</Link>
 					</li>
 				</ul>
 			</div>
-			<div className={mobileNavbar}>
-				<div className={styles.MobileLogo_Container}>
-					<Link href='/' title='Logo' ariaLabel='Logo'>
+			{/* <div>
+				<div>
+					<Link href='/' passHref>
 						{menu ? <WhiteLogo /> : <PrimaryLogo />}
 					</Link>
 				</div>
-				<ul className={mobileNavbarLinkContainer}>
-					<li className={styles.Navbar_Link}>
-						<Link href='/' type='light' title='Partners' ariaLabel='Partners'>
-							Partners
+				<ul>
+					<li>
+						<Link href='/' passHref>
+							Products
 						</Link>
 					</li>
-					<li className={styles.Navbar_Link}>
-						<Link href='/' type='light' title='Features' ariaLabel='Features'>
+					<li>
+						<Link href='/' passHref>
 							Features
 						</Link>
 					</li>
-					<li className={styles.Navbar_Link}>
-						<Link
-							href='/'
-							type='action-light'
-							title='Beta Access'
-							ariaLabel='Beta Access'
-						>
+					<li>
+						<Link href='/' passHref>
 							Alpha Access
 						</Link>
 					</li>
 				</ul>
-				<button className={mobileMenuBtn} onClick={onMobileMenuClick}>
+				<button onClick={onMobileMenuClick}>
 					<span></span>
 					<span></span>
 					<span></span>
 				</button>
-			</div>
+			</div> */}
 		</nav>
 	);
 };

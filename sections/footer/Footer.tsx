@@ -1,133 +1,212 @@
 import Link from 'components/link/Link';
 
-import styles from './Footer.module.scss';
-
 const Footer = () => {
 	return (
-		<footer className={styles.Footer}>
-			<div className={styles.Footer_Row}>
-				<div className={styles.Footer_Column}>
-					<h3 className={styles.Content_Heading}>Product</h3>
-					<ul className={styles.Footer_Page_Link_Container}>
-						<li className={styles.Footer_Page_Link}>
-							<Link href='/' type='light' title='' ariaLabel=''>
+		<footer className='bg-primary text-white'>
+			<div className='py-28 flex justify-evenly items-start'>
+				<div className=''>
+					<h3 className='mb-4 text-3xl tracking-wider font-bold font-serif'>
+						Product
+					</h3>
+					<ul className='flex flex-col justify-start items-start gap-2'>
+						<li>
+							<Link
+								href='/'
+								type='light'
+								title='Drozee Overview'
+								ariaLabel='Drozee Overview'
+							>
 								Drozee Overview
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
-							<Link href='/' type='light' title='' ariaLabel=''>
-								Learning Path
+						<li>
+							<Link
+								href='/'
+								type='light'
+								title='Learn Path'
+								ariaLabel='Learn Path'
+							>
+								LearnPath
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
-							<Link href='/' type='light' title='' ariaLabel=''>
+						<li>
+							<Link
+								href='/'
+								type='light'
+								title='StepDegree'
+								ariaLabel='StepDegree'
+							>
 								StepDegree
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
-							<Link href='/' type='light' title='' ariaLabel=''>
+						<li>
+							<Link
+								href='/'
+								type='light'
+								title='Skill Match'
+								ariaLabel='Skill Match'
+							>
 								Skill Match
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
-							<Link href='/' type='light' title='' ariaLabel=''>
+						<li>
+							<Link href='/' type='light' title='TopSlot' ariaLabel='TopSlot'>
 								TopSlot
 							</Link>
 						</li>
 					</ul>
 				</div>
-				<div className={styles.Footer_Column}>
-					<h3 className={styles.Content_Heading}>Company</h3>
-					<ul className={styles.Footer_Page_Link_Container}>
-						<li className={styles.Footer_Page_Link}>
-							<Link href='/' type='light' title='' ariaLabel=''>
+				<div className=''>
+					<h3 className='mb-4 text-3xl tracking-wider font-bold font-serif'>
+						Company
+					</h3>
+					<ul className='flex flex-col justify-start items-start gap-2'>
+						<li>
+							<Link
+								href='/about-us'
+								type='light'
+								title='About Us'
+								ariaLabel='About Us'
+							>
 								About Us
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
-							<Link href='/' type='light' title='' ariaLabel=''>
+						<li>
+							<Link
+								href='/career'
+								type='light'
+								title='Career'
+								ariaLabel='Career'
+							>
 								Career
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
-							<Link href='/' type='light' title='' ariaLabel=''>
+						<li>
+							<Link
+								href='/'
+								type='light'
+								title='Spotlight'
+								ariaLabel='Spotlight'
+							>
 								Spotlight
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
-							<Link href='/' type='light' title='' ariaLabel=''>
+						<li>
+							<Link
+								href='/'
+								type='light'
+								title='Customer Stories'
+								ariaLabel='Customer Stories'
+							>
 								Customer Stories
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
-							<Link href='/' type='light' title='' ariaLabel=''>
-								Our Heros
+						<li>
+							<Link
+								href='/'
+								type='light'
+								title='Our Heroes'
+								ariaLabel='Our Heroes'
+							>
+								Our Heroes
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
-							<Link href='/' type='light' title='' ariaLabel=''>
+						<li>
+							<Link href='/' type='light' title='Pricing' ariaLabel='Pricing'>
 								Pricing
 							</Link>
 						</li>
 					</ul>
 				</div>
-				<div className={styles.Footer_Column}>
-					<h3 className={styles.Content_Heading}>Resources</h3>
-					<ul className={styles.Footer_Page_Link_Container}>
-						<li className={styles.Footer_Page_Link}>
-							<Link href='/' type='light' title='' ariaLabel=''>
+				<div className=''>
+					<h3 className='mb-4 text-3xl tracking-wider font-bold font-serif'>
+						Resources
+					</h3>
+					<ul className='flex flex-col justify-start items-start gap-2'>
+						<li>
+							<Link
+								href='/'
+								type='light'
+								title='Help Center'
+								ariaLabel='Help Center'
+							>
 								Help Center
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
-							<Link href='/' type='light' title='' ariaLabel=''>
+						<li>
+							<Link href='/' type='light' title='Blog' ariaLabel='Blog'>
 								Blog
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
-							<Link href='/' type='light' title='' ariaLabel=''>
+						<li>
+							<Link
+								href='/'
+								type='light'
+								title='Community'
+								ariaLabel='Community'
+							>
 								Community
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
-							<Link href='/' type='light' title='' ariaLabel=''>
-								Developers (for open source)
+						<li>
+							<Link
+								href='/'
+								type='light'
+								title='Developers'
+								ariaLabel='Developer'
+							>
+								Developers
 							</Link>
 						</li>
 					</ul>
 				</div>
-				<div className={styles.Footer_Column}>
-					<h3 className={styles.Content_Heading}>Partners</h3>
-					<ul className={styles.Footer_Page_Link_Container}>
-						<li className={styles.Footer_Page_Link}>
-							<Link href='/' type='light' title='' ariaLabel=''>
+				<div className=''>
+					<h3 className='mb-4 text-3xl tracking-wider font-bold font-serif'>
+						Partners
+					</h3>
+					<ul className='flex flex-col justify-start items-start gap-2'>
+						<li>
+							<Link
+								href='/'
+								type='light'
+								title='Academics'
+								ariaLabel='Academics'
+							>
 								Academics
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
-							<Link href='/' type='light' title='' ariaLabel=''>
+						<li>
+							<Link
+								href='/'
+								type='light'
+								title='Corporates'
+								ariaLabel='Corporates'
+							>
 								Corporates
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
-							<Link href='/' type='light' title='' ariaLabel=''>
+						<li>
+							<Link
+								href='/'
+								type='light'
+								title='Recruiters'
+								ariaLabel='Recruiters'
+							>
 								Recruiters
 							</Link>
 						</li>
-						<li className={styles.Footer_Page_Link}>
-							<Link href='/' type='light' title='' ariaLabel=''>
+						<li>
+							<Link href='/' type='light' title='Startups' ariaLabel='Startups'>
 								Startups
 							</Link>
 						</li>
 					</ul>
 				</div>
 			</div>
-			<div className={styles.Footer_Copyright_Container}>
-				<p className={styles.Footer_Copyright_Para}>
-					Copyright © 2022 Drozee. All rights reserved.
-				</p>
-				<ul className={styles.Footer_SocialLink_Container}>
-					<li className={styles.FooterLink}>
+			<div className='bg-primary-dark px-36 py-8 flex justify-between items-center gap-5'>
+				<p className='text-xs'>Copyright © 2022 Drozee. All rights reserved.</p>
+				<ul className='flex justify-evenly items-center gap-8'>
+					<li>
 						<Link href='/' title='Facebook' ariaLabel='Facebook' type='light'>
 							<svg
 								width='10'
@@ -143,7 +222,7 @@ const Footer = () => {
 							</svg>
 						</Link>
 					</li>
-					<li className={styles.FooterLink}>
+					<li>
 						<Link href='/' title='Twitter' ariaLabel='Twitter' type='light'>
 							<svg
 								width='23'
@@ -159,7 +238,7 @@ const Footer = () => {
 							</svg>
 						</Link>
 					</li>
-					<li className={styles.FooterLink}>
+					<li>
 						<Link href='/' title='Instagram' ariaLabel='Instagram' type='light'>
 							<svg
 								width='23'
@@ -190,7 +269,7 @@ const Footer = () => {
 							</svg>
 						</Link>
 					</li>
-					<li className={styles.FooterLink}>
+					<li>
 						<Link href='/' title='Linkedin' ariaLabel='Linkedin' type='light'>
 							<svg
 								width='23'
