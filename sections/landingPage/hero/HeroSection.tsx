@@ -44,11 +44,11 @@ const HeroSection = () => {
 						</form>
 						<p className='mt-4 text-xs'>
 							Don’t worry, we won’t charge our alpha users. Free forever{' '}
-							<Link href='/' passHref>
+							<Link href='/alpha-access' passHref>
 								<a
 									className='text-secondary'
-									title='Join alpa Program'
-									aria-label='Join alpa Program'
+									title='Join alpha Program'
+									aria-label='Join alpha Program'
 								>
 									join now.
 								</a>

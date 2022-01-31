@@ -114,9 +114,9 @@ const Navbar = () => {
 						</Link>
 					</li>
 					<li>
-						<Link href='/' passHref>
+						<Link href='/alpha-access' passHref>
 							<a
-								className='bg-primary-light text-primary py-3 px-7 rounded-3xl font-semibold text-base'
+								className='bg-primary-light text-primary py-3 px-7 rounded-3xl font-semibold text-base hover:text-secondary'
 								title='Alpha Access'
 								aria-label='Alpha Access'
 							>

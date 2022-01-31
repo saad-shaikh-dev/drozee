@@ -1,21 +1,46 @@
+import { useState, useRef } from 'react';
+
 const NewsletterSection = () => {
+	const [isSubscribed, setIsSubscribed] = useState(false);
+	const emailRef = useRef<HTMLInputElement>(null);
+
+	const onSubmitHandler = (event: React.FormEvent<HTMLFormElement>) => {
+		event.preventDefault();
+		if (emailRef && emailRef.current) {
+			console.log(emailRef.current.value);
+			setIsSubscribed(true);
+			setInterval(() => {
+				setIsSubscribed(false);
+			}, 2000);
+			// Reset Form
+			emailRef.current.value = '';
+		}
+	};
+
 	return (
 		<section className='overflow-hidden relative pt-36 pb-52 px-8'>
 			<h2 className='text-center text-3xl font-bold font-serif'>
 				Subscribe to your newsletter & get latest updates!
 			</h2>
-			<form className='mt-14 relative z-[1] flex justify-center items-center'>
+			<form
+				className='mt-14 relative z-[1] flex justify-center items-center'
+				onSubmit={(event) => onSubmitHandler(event)}
+			>
 				<input
 					type='email'
+					required
+					ref={emailRef}
 					placeholder='Enter your email'
 					className='w-72 py-4 px-6 rounded-l-md bg-primary-light focus:outline-none'
 				/>
 				<button
 					type='submit'
 					aria-label='Subscribe'
-					className='text-white bg-primary py-4 px-6 rounded-r-md hover:cursor-pointer'
+					className={`text-white ${
+						isSubscribed ? 'bg-support-1' : 'bg-primary'
+					}  py-4 px-6 rounded-r-md hover:cursor-pointer`}
 				>
-					Subscribe
+					{isSubscribed ? 'Subscribed' : 'Subscribe'}
 				</button>
 			</form>
 			<svg

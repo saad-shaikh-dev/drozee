@@ -1,6 +1,8 @@
+import type { NextPage } from 'next';
+
 import UnderDevelopment from 'sections/underDevelopment/UnderDevelopment';
 
-const AboutUs = () => {
+const AboutUs: NextPage = () => {
 	return <UnderDevelopment />;
 };
 
