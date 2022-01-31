@@ -1,9 +1,44 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+import { useState, useRef } from 'react';
+import axios from 'utils/axiosInstance';
+
 import DashboardImg from 'public/dashboard_demo.png';
 
 const HeroSection = () => {
+	const [isSubmited, setIsSubmited] = useState(false);
+	const emailRef = useRef<HTMLInputElement>(null);
+
+	const onSubmitHandler = async (event: React.FormEvent<HTMLFormElement>) => {
+		event.preventDefault();
+		if (emailRef && emailRef.current) {
+			await axios({
+				method: 'POST',
+				url: 'api/waitlist',
+				headers: {
+					'content-type': 'application/json'
+				},
+				data: {
+					email: emailRef.current.value
+				}
+			})
+				.then((res) => {
+					if (res.status === 200) {
+						setIsSubmited(true);
+						setInterval(() => {
+							setIsSubmited(false);
+						}, 2000);
+					}
+				})
+				.catch((err) => {
+					console.log(err);
+				});
+			// Reset Form
+			emailRef.current.value = '';
+		}
+	};
+
 	return (
 		<section className='w-full'>
 			<div className='pl-20 flex justify-between items-center'>
@@ -17,16 +52,23 @@ const HeroSection = () => {
 						place. Save time & money.
 					</h4>
 					<div className='w-full mt-10'>
-						<form className='w-full flex justify-start items-center'>
+						<form
+							className='w-full flex justify-start items-center'
+							onSubmit={(event) => onSubmitHandler(event)}
+						>
 							<input
 								className='w-3/6 py-3 px-6 text-base rounded-l-md bg-primary-light focus:outline-none'
 								type='email'
+								required
+								ref={emailRef}
 								placeholder='Add your email in waitlist'
 							/>
 							<button
 								type='submit'
 								aria-label='Join beta accses'
-								className='py-4 px-6 rounded-r-md text-white bg-primary hover:cursor-pointer'
+								className={`py-4 px-6 rounded-r-md text-white ${
+									isSubmited ? 'bg-support-1' : 'bg-primary'
+								}  hover:cursor-pointer`}
 							>
 								<svg
 									width='32'

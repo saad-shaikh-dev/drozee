@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import axios from 'utils/axiosInstance';
 
 const HeroSection = () => {
 	const [isSubmited, setIsSubmited] = useState(false);
@@ -7,7 +8,7 @@ const HeroSection = () => {
 	const emailRef = useRef<HTMLInputElement>(null);
 	const institutionRef = useRef<HTMLInputElement>(null);
 
-	const onSubmitHandler = (event: React.FormEvent<HTMLFormElement>) => {
+	const onSubmitHandler = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		if (
 			nameRef &&
@@ -17,15 +18,30 @@ const HeroSection = () => {
 			institutionRef &&
 			institutionRef.current
 		) {
-			console.log(
-				nameRef.current.value,
-				emailRef.current.value,
-				institutionRef.current.value
-			);
-			setIsSubmited(true);
-			setInterval(() => {
-				setIsSubmited(false);
-			}, 2000);
+			await axios({
+				method: 'POST',
+				url: 'api/alpha_access',
+				headers: {
+					'content-type': 'application/json'
+				},
+				data: {
+					name: nameRef.current.value,
+					email: emailRef.current.value,
+					institution: institutionRef.current.value
+				}
+			})
+				.then((res) => {
+					if (res.status === 200) {
+						setIsSubmited(true);
+						setInterval(() => {
+							setIsSubmited(false);
+						}, 2000);
+					}
+				})
+				.catch((err) => {
+					console.log(err);
+				});
+
 			// Reset Form
 			nameRef.current.value = '';
 			emailRef.current.value = '';

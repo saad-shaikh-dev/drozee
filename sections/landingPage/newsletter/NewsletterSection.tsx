@@ -1,17 +1,34 @@
 import { useState, useRef } from 'react';
+import axios from 'utils/axiosInstance';
 
 const NewsletterSection = () => {
 	const [isSubscribed, setIsSubscribed] = useState(false);
 	const emailRef = useRef<HTMLInputElement>(null);
 
-	const onSubmitHandler = (event: React.FormEvent<HTMLFormElement>) => {
+	const onSubmitHandler = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		if (emailRef && emailRef.current) {
-			console.log(emailRef.current.value);
-			setIsSubscribed(true);
-			setInterval(() => {
-				setIsSubscribed(false);
-			}, 2000);
+			await axios({
+				method: 'POST',
+				url: 'api/newsletter',
+				headers: {
+					'content-type': 'application/json'
+				},
+				data: {
+					email: emailRef.current.value
+				}
+			})
+				.then((res) => {
+					if (res.status === 200) {
+						setIsSubscribed(true);
+						setInterval(() => {
+							setIsSubscribed(false);
+						}, 2000);
+					}
+				})
+				.catch((err) => {
+					console.log(err);
+				});
 			// Reset Form
 			emailRef.current.value = '';
 		}
