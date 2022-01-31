@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import Logo from 'assets/logo/big_primary_dashed_logo.svg';
-import Page404SVG from 'assets/sections/Page404/page_404.svg';
+import Page404SVG from 'assets/sections/page404/page_404.svg';
 
 const Page404 = () => {
 	return (
