@@ -11,26 +11,28 @@ export default async function handler(
 	req: NextApiRequest,
 	res: NextApiResponse<Data>
 ) {
-	const email = req.body.email;
-	if (email.length < 6) {
-		res.status(400).json({ error: 'Email must be at least 6 characters long' });
-	} else {
-		if (req.method === 'POST') {
-			// connect to the database
-			let { db } = await connectToDatabase();
-			// add email to newsletter collection
-			await db
-				.collection('waitlist')
-				.insertOne({ email: email })
-				.then((result: any) => {
-					return res.status(200).json({ email: email });
-				})
-				.catch((err: any) => {
-					return res.status(400).json({ error: err });
-				});
+	if (req.method === 'POST') {
+		const email = req.body.email;
+		if (email.length < 6) {
+			res
+				.status(400)
+				.json({ error: 'Email must be at least 6 characters long' });
 		} else {
-			// return method not allowed
-			res.status(400).json({ error: 'Method not allowed' });
 		}
+		// connect to the database
+		let { db } = await connectToDatabase();
+		// add email to newsletter collection
+		await db
+			.collection('waitlist')
+			.insertOne({ email: email })
+			.then((result: any) => {
+				return res.status(200).json({ email: email });
+			})
+			.catch((err: any) => {
+				return res.status(400).json({ error: err });
+			});
+	} else {
+		// return method not allowed
+		res.status(400).json({ error: 'Method not allowed' });
 	}
 }
