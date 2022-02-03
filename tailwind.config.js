@@ -33,6 +33,9 @@ module.exports = {
 			fontFamily: {
 				sans: ['Poppins', ...defaultTheme.fontFamily.sans],
 				serif: ['DM Serif Display', ...defaultTheme.fontFamily.serif]
+			},
+			transitionProperty: {
+				right: 'right'
 			}
 		}
 	},

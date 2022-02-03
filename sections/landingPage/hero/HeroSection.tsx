@@ -41,23 +41,23 @@ const HeroSection = () => {
 
 	return (
 		<section className='w-full'>
-			<div className='pl-20 flex justify-between items-center'>
-				<div className='w-3/6 flex flex-col justify-center items-start gap-10'>
-					<h1 className='max-w-[590px] text-5xl font-serif leading-snug'>
+			<div className='lg:pl-20 flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-0'>
+				<div className='order-2 w-full px-10 lg:px-0 lg:order-1 lg:w-3/6 flex flex-col justify-center items-start gap-8 lg:gap-10'>
+					<h1 className='max-w-[590px] text-3xl lg:text-5xl font-serif lg:leading-snug'>
 						Amp up learning potential via
 						<span className='text-secondary'> synergizing credentials</span>
 					</h1>
-					<h4 className='max-w-[560px] text-base'>
+					<h4 className='max-w-[560px] text-sm lg:text-base'>
 						Now manage, Compare & showcase your whole learning journey at one
 						place. Save time & money.
 					</h4>
-					<div className='w-full mt-10'>
+					<div className='w-full mt-4 lg:mt-10'>
 						<form
-							className='w-full flex justify-start items-center'
+							className='w-full max-w-sm flex justify-start items-center'
 							onSubmit={(event) => onSubmitHandler(event)}
 						>
 							<input
-								className='w-3/6 py-3 px-6 text-base rounded-l-md bg-primary-light focus:outline-none'
+								className='w-full py-3 px-6 text-xs lg:text-base rounded-l-md bg-primary-light focus:outline-none'
 								type='email'
 								required
 								ref={emailRef}
@@ -66,7 +66,7 @@ const HeroSection = () => {
 							<button
 								type='submit'
 								aria-label='Join beta accses'
-								className={`py-4 px-6 rounded-r-md text-white ${
+								className={`py-3 lg:py-4 px-6 rounded-r-md text-white ${
 									isSubmited ? 'bg-support-1' : 'bg-primary'
 								}  hover:cursor-pointer`}
 							>
@@ -98,17 +98,9 @@ const HeroSection = () => {
 						</p>
 					</div>
 				</div>
-				<div className='w-3/6 min-h-[calc(100vh-5vh)] bg-primary rounded-tl-[100px] rounded-br-[100px] flex justify-center items-center'>
-					<div className='w-full relative right-[10%]'>
-						<Image src={DashboardImg} alt='Dashboard' className='scale-110' />
-						<div className='absolute bottom-2 right-0 w-[180px] h-[160px] px-4 text-white bg-primary rounded-lg border-2 border-primary-light flex flex-col justify-center items-center gap-4'>
-							<p className='text-base font-serif'>
-								Learn Master classes for New Hights of Career
-							</p>
-							<button className='py-2 px-6 text-white bg-support-1 rounded-md text-xs'>
-								More
-							</button>
-						</div>
+				<div className='order-1 ml-auto w-5/6 min-h-[55vh] lg:order-2 lg:ml-0 lg:w-3/6 lg:min-h-[calc(100vh-5vh)] bg-primary rounded-tl-[100px] rounded-br-[100px] flex justify-center items-center'>
+					<div className='w-full relative right-[10%] top-8'>
+						<Image src={DashboardImg} alt='Dashboard' />
 					</div>
 				</div>
 			</div>
