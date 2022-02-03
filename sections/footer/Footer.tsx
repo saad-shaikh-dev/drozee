@@ -3,12 +3,12 @@ import Link from 'next/link';
 const Footer = () => {
 	return (
 		<footer className='bg-primary text-white'>
-			<div className='py-28 flex justify-evenly items-start'>
+			<div className='py-14 px-10 lg:px-0 lg:py-28 flex flex-col lg:flex-row justify-evenly items-start gap-10 lg:gap-0'>
 				<div className=''>
-					<h3 className='mb-4 text-3xl tracking-wider font-bold font-serif'>
+					<h3 className='mb-4 text-xl lg:text-3xl tracking-wider font-bold font-serif'>
 						Product
 					</h3>
-					<ul className='flex flex-col justify-start items-start gap-2'>
+					<ul className='flex flex-col justify-start items-start gap-2 text-sm'>
 						<li>
 							<Link href='/' passHref>
 								<a title='Drozee Overview' aria-label='Drozee Overview'>
@@ -47,10 +47,10 @@ const Footer = () => {
 					</ul>
 				</div>
 				<div className=''>
-					<h3 className='mb-4 text-3xl tracking-wider font-bold font-serif'>
+					<h3 className='mb-4 text-xl lg:text-3xl tracking-wider font-bold font-serif'>
 						Company
 					</h3>
-					<ul className='flex flex-col justify-start items-start gap-2'>
+					<ul className='flex flex-col justify-start items-start gap-2 text-sm'>
 						<li>
 							<Link href='/about-us' passHref>
 								<a title='About Us' aria-label='About Us'>
@@ -96,10 +96,10 @@ const Footer = () => {
 					</ul>
 				</div>
 				<div className=''>
-					<h3 className='mb-4 text-3xl tracking-wider font-bold font-serif'>
+					<h3 className='mb-4 text-xl lg:text-3xl tracking-wider font-bold font-serif'>
 						Resources
 					</h3>
-					<ul className='flex flex-col justify-start items-start gap-2'>
+					<ul className='flex flex-col justify-start items-start gap-2 text-sm'>
 						<li>
 							<Link href='/' passHref>
 								<a title='Help Center' aria-label='Help Center'>
@@ -131,10 +131,10 @@ const Footer = () => {
 					</ul>
 				</div>
 				<div className=''>
-					<h3 className='mb-4 text-3xl tracking-wider font-bold font-serif'>
+					<h3 className='mb-4 text-xl lg:text-3xl tracking-wider font-bold font-serif'>
 						Partners
 					</h3>
-					<ul className='flex flex-col justify-start items-start gap-2'>
+					<ul className='flex flex-col justify-start items-start gap-2 text-sm'>
 						<li>
 							<Link href='/' passHref>
 								<a title='Academics' aria-label='Academics'>
@@ -166,7 +166,7 @@ const Footer = () => {
 					</ul>
 				</div>
 			</div>
-			<div className='bg-primary-dark px-36 py-8 flex justify-between items-center gap-5'>
+			<div className='bg-primary-dark px-10 py-8 lg:px-36 flex flex-col lg:flex-row justify-between items-center gap-5'>
 				<p className='text-xs'>Copyright © 2022 Drozee. All rights reserved.</p>
 				<ul className='flex justify-evenly items-center gap-8'>
 					<li>

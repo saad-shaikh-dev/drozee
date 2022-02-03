@@ -6,12 +6,12 @@ import SupriseSVG from 'assets/sections/benefits/suprise.svg';
 const BenefitsSection = () => {
 	return (
 		<section className='pt-20 pb-24 px-10 bg-primary-light'>
-			<h2 className='text-center text-3xl font-bold font-serif'>
+			<h2 className='max-w-xs md:max-w-xl mx-auto text-center text-lg md:text-3xl font-bold font-serif'>
 				Join at alpha phase and get exclusive
 				<div className='inline-block w-max relative ml-4'>
 					<h2 className='text-white relative z-[1]'>benefits</h2>
 					<svg
-						className='absolute -top-3 -left-4'
+						className='absolute -top-4 md:-top-2 -left-4 w-[104px] md:w-[158px]'
 						width='158'
 						height='82'
 						viewBox='0 0 158 82'
@@ -52,10 +52,10 @@ const BenefitsSection = () => {
 					</svg>
 				</div>
 			</h2>
-			<div className='mt-16 mx-auto max-w-4xl flex flex-col lg:flex-row justify-center items-stretch lg:items-center'>
-				<div className='flex-1 flex justify-evenly lg:justify-evenly items-center'>
+			<div className='mt-16 mx-auto max-w-4xl flex flex-col lg:flex-row justify-center items-stretch lg:items-center gap-8 lg:gap-0'>
+				<div className='flex-1 flex justify-evenly items-center'>
 					<div className='flex-1 flex flex-col justify-center items-center gap-4'>
-						<FreeForeverSVG />
+						<FreeForeverSVG className='min-h-[33px]' />
 						<p>Free Forever</p>
 					</div>
 					<div className='flex-1 flex flex-col justify-center items-center gap-4'>
