@@ -1,12 +1,16 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import Link from 'next/link';
 
-import MonitorLogo from 'assets/logo/big_primary_dashed_logo.svg';
-import WhiteLogo from 'assets/logo/small_white_dashed_logo.svg';
+import DarkMonitorLogo from 'assets/logo/big_primary_dashed_logo.svg';
+import LightMonitorLogo from 'assets/logo/big_white_dashed_logo.svg';
+import LightMobileLogo from 'assets/logo/small_white_dashed_logo.svg';
 
 const Navbar = () => {
+	const navbarRef = useRef<HTMLElement>(null);
 	const [menu, showMenu] = useState(false);
+	const [navbarScrolled, setNavbarScrolled] = useState(false);
+
 	// Hamberger menu click handler
 	// Change css classes
 	const onMobileMenuClick = () => {
@@ -14,9 +18,28 @@ const Navbar = () => {
 		showMenu(!prevMenuState);
 	};
 
+	useEffect(() => {
+		window.onscroll = () => {
+			if (document.documentElement.scrollTop > 100) {
+				if (navbarRef && navbarRef.current) {
+					setNavbarScrolled(true);
+				}
+			} else {
+				setNavbarScrolled(false);
+			}
+		};
+	});
+
 	return (
-		<nav className='w-full absolute top-0 left-0 right-0 min-h-[8vh] z-50'>
-			<div className='hidden xl:py-6 xl:px-20 xl:flex xl:justify-between xl:items-center'>
+		<nav
+			className='w-full fixed top-0 left-0 right-0 min-h-[8vh] z-50'
+			ref={navbarRef}
+		>
+			<div
+				className={`hidden xl:py-6 xl:px-20 xl:flex xl:justify-between xl:items-center ${
+					navbarScrolled ? 'backdrop-blur-3xl bg-black bg-opacity-60' : null
+				} transition-all duration-200`}
+			>
 				<div className='w-max'>
 					<Link href='/' passHref>
 						<a
@@ -24,8 +47,18 @@ const Navbar = () => {
 							aria-label='Home'
 							className='flex justify-center items-center gap-3'
 						>
-							<MonitorLogo aria-label='Logo' />
-							<p className='text-xl font-medium text-primary'>Drozee</p>
+							{navbarScrolled ? (
+								<LightMonitorLogo aria-label='Logo' />
+							) : (
+								<DarkMonitorLogo aria-label='Logo' />
+							)}
+							<p
+								className={`text-xl font-medium ${
+									navbarScrolled ? 'text-white' : 'text-primary'
+								}`}
+							>
+								Drozee
+							</p>
 						</a>
 					</Link>
 				</div>
@@ -128,7 +161,7 @@ const Navbar = () => {
 			</div>
 			<div
 				className={`w-full py-4 px-4 flex justify-between items-center relative xl:hidden ${
-					menu ? 'bg-primary' : 'bg-black bg-opacity-60'
+					menu ? 'bg-primary' : 'backdrop-blur-3xl bg-black bg-opacity-60'
 				}`}
 			>
 				<div className='w-max'>
@@ -138,7 +171,7 @@ const Navbar = () => {
 							aria-label='Home'
 							className='flex justify-center items-center gap-3'
 						>
-							<WhiteLogo aria-label='Logo' />
+							<LightMobileLogo aria-label='Logo' />
 						</a>
 					</Link>
 				</div>
