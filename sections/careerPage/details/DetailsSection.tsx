@@ -6,17 +6,17 @@ import CareerLearnAndGrowImg from 'public/career_learn_and_grow.png';
 
 const DetailsSection = () => {
 	return (
-		<section className='py-20 px-36'>
+		<section className='section'>
+			<div>
 			<h2 className='max-w-xl mx-auto text-center text-6xl font-bold text-primary'>
 				Our values
 			</h2>
 			<p className='max-w-2xl mx-auto mt-4 text-lg text-center'>
-				{
 					"Our values are the underpinning for all that we do at Drozee — we believe that a great product is going to solve people's problem."
-				}
-			</p>
-			<div className='mt-20 flex flex-col gap-40'>
-				<div className='flex justify-between items-center'>
+				</p>
+			</div>
+			<div className='mt-20 flex flex-col flex-vertical'>
+				<div className='flex-horizontal'>
 					<div className='max-w-lg flex flex-col gap-5'>
 						<h3 className='text-6xl font-serif leading-tight text-secondary'>
 							Love
@@ -57,8 +57,8 @@ const DetailsSection = () => {
 						</svg>
 					</div>
 				</div>
-				<div className='flex justify-between items-center'>
-					<div className='order-2 max-w-lg flex flex-col gap-5'>
+				<div className='flex-horizontal-reverse'>
+					<div className='max-w-lg flex flex-col gap-5'>
 						<h3 className='text-6xl font-serif leading-tight text-secondary'>
 							Solve
 							<br /> problems
@@ -68,7 +68,7 @@ const DetailsSection = () => {
 							but no one gave them the opportunity.
 						</p>
 					</div>
-					<div className='order-1 min-w-[450px] min-h-[362px] relative'>
+					<div className='min-w-[450px] min-h-[362px] relative'>
 						<div className='w-full h-full rounded-tr-3xl rounded-br-3xl overflow-hidden'>
 							<Image
 								src={SolveProblemImg}
@@ -96,7 +96,7 @@ const DetailsSection = () => {
 						</svg>
 					</div>
 				</div>
-				<div className='flex justify-between items-center'>
+				<div className='flex-horizontal'>
 					<div className='max-w-lg flex flex-col gap-5'>
 						<h3 className='text-6xl font-serif leading-tight text-secondary'>
 							Learn

@@ -29,3 +29,36 @@
 		@apply scroll-smooth overflow-x-hidden;
 	}
 }
+
+/* Saad Shaikh's CSS */
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{width: 100vw;display: grid; place-items: center;}
+main {margin-top:110px;width:clamp(0px,90vw,1200px); display: grid; place-items: center;}
+
+.invert-color {filter: invert(100%);}
+
+.section{width: 100%; display: flex; flex-direction: column; margin-bottom: 30px;}
+.hero-section{height: 100vh;}
+.hero-text{width: 600px; height: 90vh; padding-right: 1rem;}
+.hero-image{position: absolute; right: 0; width: 50vw; height: 100vh;}
+.flex-horizontal {display: flex; flex-wrap: wrap; gap: 5rem; align-items: center;justify-content: center;}
+.flex-horizontal-reverse {display: flex;flex-direction: row-reverse; flex-wrap: wrap; gap: 5rem; align-items: center;justify-content: center;}
+.flex-vertical {display: flex; flex-direction: column; gap: 5rem; align-items: center;justify-content: center;}
+.jobs-section {max-width: 700px;padding-top: 100px;}
+.jobs-svg {position: relative; width: clamp(0px,90vw,1200px);left: -250px;}
+
+@media only screen and (max-width: 1200px) {
+	main{margin-top: 50px;}
+	.hero-section{height: 200vh;}
+	.hero-text{padding-right: 0;}
+  	.hero-image {
+    	position: absolute; width: 100%; top:100vh; left: 5vw; height: 100vh;
+  	}
+	.jobs-svg {position: relative; width: clamp(0px,90vw,1200px);left: 0;}
+	.flex-horizontal, .flex-horizontal-reverse {gap: 2rem;}
+}

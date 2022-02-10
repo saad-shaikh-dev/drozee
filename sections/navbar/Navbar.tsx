@@ -253,14 +253,14 @@ const Navbar = () => {
 					</li>
 					<li>
 						<Link href='/' passHref>
-							<a className='text-white' title='Know us' aria-label='Know us'>
+							<a title='Know us' aria-label='Know us'>
 								Know us
 							</a>
 						</Link>
 					</li>
 					<li>
 						<Link href='/' passHref>
-							<a className='text-white' title='Partners' aria-label='Partners'>
+							<a title='Partners' aria-label='Partners'>
 								Partners
 							</a>
 						</Link>

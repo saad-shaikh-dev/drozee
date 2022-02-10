@@ -4,9 +4,8 @@ import CareerHeroSVG from 'assets/sections/careerHero/career_hero.svg';
 const HeroSection = () => {
 	const router = useRouter();
 	return (
-		<section className='w-full'>
-			<div className='pl-20 flex justify-between items-center'>
-				<div className='w-3/6 flex flex-col justify-center items-start gap-10'>
+		<section className='section hero-section'>
+				<div className='w-3/6 flex flex-col justify-center items-start gap-10 hero-text'>
 					<h1 className='max-w-[590px] text-6xl font-serif leading-snug text-primary'>
 						Careers at Drozee
 					</h1>
@@ -25,10 +24,9 @@ const HeroSection = () => {
 						</button>
 					</div>
 				</div>
-				<div className='w-3/6 min-h-[calc(100vh-5vh)] bg-primary rounded-tl-[100px] rounded-br-[100px] flex justify-center items-center'>
+				<div className='w-3/6 min-h-[calc(100vh-5vh)] bg-primary rounded-tl-[100px] rounded-br-[100px] flex justify-center items-center hero-image'>
 					<CareerHeroSVG />
 				</div>
-			</div>
 		</section>
 	);
 };
