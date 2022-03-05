@@ -31,13 +31,16 @@
 }
 
 /* Saad Shaikh's CSS */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 *{
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
 
-body{width: 100vw;display: grid; place-items: center;}
+body{width: 100vw;display: grid; place-items: center;font-family: 'Poppins', sans-serif; font-size: 16px;}
 main {margin-top:110px;width:clamp(0px,90vw,1200px); display: grid; place-items: center;}
 
 .invert-color {filter: invert(100%);}
@@ -52,8 +55,73 @@ main {margin-top:110px;width:clamp(0px,90vw,1200px); display: grid; place-items:
 .jobs-section {max-width: 700px;padding-top: 100px;}
 .jobs-svg {position: relative; width: clamp(0px,90vw,1200px);left: -250px;}
 
+/* Partner's page */
+.partners {
+	width: 100vw;
+	background: rgba(var(--clr-primary));
+	display: grid;
+	place-items: center;
+	color: #fafafa;
+}
+.partners-h1 {font-family: 'DM Serif Display', serif; font-size: 200%;
+	background: linear-gradient(to right, white,#555571);
+	background-clip: text;
+	color: transparent;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.partners-heart {
+	font-size: 200%;
+	background: linear-gradient(to bottom, white,#2b2b4d);
+	background-clip: text;
+	color: transparent;
+}
+.partners-h2 {font-family: 'DM Serif Display', serif; font-size: 200%; margin-bottom: 10px;}
+.partners-p1 {
+	margin-bottom: 4em;
+	text-align: center;
+}
+.partner-cards {display:flex; flex-wrap:wrap; gap: 30px; justify-content: center;
+	margin-bottom: 8em;
+}
+.partner-card {
+	width: clamp(0px,100%,350px);
+	border-radius: 1em;
+	padding: 20px 30px 30px 30px;
+}
+.partner-card-1 {background: linear-gradient(135deg,#373758,#202245,#202245,#214668);}
+.partner-card-2 {background: linear-gradient(135deg,#373758,#202245,#202245,#332168);}
+.partner-card-3 {background: linear-gradient(135deg,#373758,#202245,#202245,#4a3c3f);}
+.partner-card-4 {background: linear-gradient(135deg,#373758,#202245,#202245,#4b213e);}
+.partner-card-5 {background: linear-gradient(135deg,#373758,#202245,#202245,#224b54);}
+.partner-card-6 {background: linear-gradient(135deg,#373758,#202245,#202245,#212c67);}
+.partners-card-p {
+	margin-bottom: 25px;
+}
+.partners-button {
+	width: clamp(0px,100%,350px);
+	border: #596882 .5px solid;
+	border-radius: 2em;
+	background: linear-gradient(135deg,#414160,#2a3053,#3e5371);
+	padding: 7.5px;
+}
+.partners-div-2 {
+	display: grid;
+	gap: 30px;
+	place-items: center;
+}
+.partners-image {
+	width: clamp(0px,100%,350px);
+	height: auto;
+	margin-bottom: 2.5em;
+}
+.partners-div-2 ol {
+	width: 100%;
+	list-style-type: disc;
+}
+
 @media only screen and (max-width: 1200px) {
-	main{margin-top: 50px;}
+	main{margin-top: 75px;}
 	.hero-section{height: 200vh;}
 	.hero-text{padding-right: 0;}
   	.hero-image {
